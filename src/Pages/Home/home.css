@@ -1,0 +1,83 @@
+.our-partners-homepage {
+    width: 100%;
+    padding: 2rem;
+    background-color: #000000;
+}
+
+.our-partners-homepage h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.who-we-are-section {
+    flex-direction: row-reverse;
+    padding-left: 6rem;
+    padding-right: 6rem;
+
+}
+
+.home-our-services-section {
+    width: 100%;
+    padding: 7rem;
+    background-color: #000000;
+}
+
+.home-our-services {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home-our-services h2 {
+    color: #ffffff;
+}
+
+.home-more-services {
+    width: auto;
+    border: none;
+}
+
+.home-our-services-cards {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+/* Responsive navbar For Mobile */
+@media (max-width:500px){
+   
+
+    .home-our-services-section {
+        width: 100%;
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+    } 
+    
+    .home-our-services-cards {
+        display: flex;
+        flex-direction: column-reverse;
+       }
+    
+    
+    .about-zolaha-img{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    
+.who-we-are-section {
+    flex-direction: row-reverse;
+    padding-left: 0rem;
+    padding-right: 0rem;
+
+}
+}

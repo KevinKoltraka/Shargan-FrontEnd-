@@ -1,0 +1,21 @@
+.disclaimer{
+    padding: 5rem;
+}
+
+.top-disclaimer{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.disclaimer-content-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: justify;
+}
+
+.disclaimer-content-box p{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+}

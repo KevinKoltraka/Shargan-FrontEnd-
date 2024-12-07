@@ -1,0 +1,36 @@
+.our-services{
+  text-align: center;
+  font-size: 3rem;
+  background-color: #000000;
+}
+  .how-we-do-cards{
+    display: flex;
+    gap: 3rem;
+    padding: 4rem;
+    justify-content: center;
+    background-color: #000000;
+  }
+
+  
+/* Responsive navbar For Tablet */
+
+@media (max-width:900px){
+  .our-services{
+    font-size: 3rem;
+  }
+  
+  .how-we-do-cards{
+    display: grid;
+  }
+}
+
+
+/* Responsive navbar For Mobile */
+@media (max-width:500px){
+  .our-services{
+    font-size: 2rem;
+  }
+  .how-we-do-cards{
+    display: block;
+  }
+}

@@ -1,0 +1,194 @@
+.about-zolaha-section{
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    background-color: #000000;
+}
+.left-about-zolaha-section{
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-zolaha-img{
+    width: 65%;
+    border-radius: 15px;
+    margin-left: -100px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+.right-about-zolaha-section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    gap: 2rem;
+    margin-right: 150px;
+}
+
+.about-company-name h3{
+font-size: 2.5rem;
+text-align: justify;
+color: #ffffff;
+}
+
+.about-company-scene{
+    font-size: 2rem;
+}
+
+.about-company-scene h2 {
+    color: #ffffff;
+}
+
+.about-company-details{
+    font-size: 1.8rem;
+    text-align: justify;
+}
+
+.about-company-details p{
+    color: #ffffff;
+}
+
+.company-facilities{
+    display: flex;
+    gap: 5rem;
+}
+.company-facilities .checklist-company{
+    font-size: 1.5rem;
+     color: lightslategray;
+}
+
+.company-facilities .checklist-company p {
+    color: #ffffff;
+}
+
+
+.btn-about-zolaha{
+    width: 18rem;
+}
+
+/* TABLET VIEW */
+
+@media (max-width:900px){
+
+    .about-zolaha-section{
+        display: block;
+        padding: 5rem;
+    }
+    .left-about-zolaha-section{
+        width: 100%;
+        padding: 0rem;
+    }
+    .about-zolaha-img{
+        width: 70%;
+        margin-left: 0px;
+    }
+    .right-about-zolaha-section{
+        width: 100%;
+        display: flex;
+        margin-right: 0px;
+    }
+    
+    
+    .about-company-details{
+        font-size: 1.5rem;
+        text-align: justify;
+        color: lightslategray;
+    }
+    .company-facilities{
+        display: flex;
+        gap: 5rem;
+    }
+    .company-facilities .checklist-company{
+        font-size: 1.5rem;
+        color: rgb(124, 126, 129);
+    }
+    
+    
+}
+
+/* MOBILE DESKTOP VIEW */
+
+
+
+@media only screen and (max-width: 1100px) and (min-width: 900px){
+    .about-zolaha-section{
+        display: block;
+        padding: 5rem;
+    }
+    .left-about-zolaha-section{
+        width: 100%;
+        padding: 0rem;
+    }
+    .about-zolaha-img{
+        width: 70%;
+    }
+    .right-about-zolaha-section{
+        width: 100%;
+        display: flex;
+    }
+    
+    
+    .about-company-details{
+        font-size: 1.4rem;
+        text-align: justify;
+        color: lightslategray;
+    }
+    .company-facilities{
+        display: flex;
+        gap: 5rem;
+    }
+    .company-facilities .checklist-company{
+        font-size: 1.8rem;
+         color: rgb(124, 126, 129);
+    }
+    
+    
+}
+
+
+
+
+
+/* Responsive navbar For Mobile */
+@media (max-width:500px){
+    .about-zolaha-section{
+        display: block;
+        padding: 0rem;
+    }
+    .left-about-zolaha-section{
+        width: 100%;
+        padding: 0rem;
+    }
+    .about-zolaha-img{
+        width: 70%;
+    }
+    .right-about-zolaha-section{
+        width: 100%;
+        display: flex;
+    }
+    
+.about-company-name h3{
+    font-size: 2rem;
+    text-align: justify;
+}
+    
+    .about-company-scene{
+        font-size: 1rem;
+    }
+    
+
+    
+    .about-company-details{
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+    .company-facilities{
+        display: flex;
+        gap: 5rem;
+    }
+    .company-facilities .checklist-company{
+        font-size: 1rem;
+    }
+}

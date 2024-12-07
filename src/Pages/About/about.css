@@ -1,0 +1,14 @@
+.about-us-section{
+    background-color: blue;
+    flex-direction: column-reverse;
+}
+
+.Button-Bharat{
+    background-image: linear-gradient(0deg, #138808 33%, #ffffff 33%, #ffffff 66%, #FF9933 66% );    border: none;
+    padding: 2rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: 'Kaisei Opti', serif;
+    font-weight: bolder;
+}

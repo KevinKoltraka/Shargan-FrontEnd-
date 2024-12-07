@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-clr);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--para-clr);
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 900;
+  font-family: 'Kaisei Opti', serif;
+
+  /* font-family: 'Cinzel', serif; */
+}
+
+
+
+
+
+p {
+  color: var(--para-clr);
+  font-family: 'Roboto Slab', serif;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+h2,
+h3 {
+  color: #000000;
+  font-family: 'Kaisei Opti', serif;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  cursor: pointer;
+  color: var(--main-heading);
+  font-size: 2.5rem;
+}
+
+
+
+.button-header {
+  padding: 1.5rem;
+  color: rgb(0 0 0);
+  font-size: 1.67rem;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px 5px 5px 5px;
+}
+
+.button-header:hover{
+  background-color: var(--btn-hover);
+  color: rgb(255, 255, 255);
+}
+
+.light-theme {
+  --main-heading: rgb(9, 9, 9);
+  --para-clr: rgb(0 0 0);
+  --btn-text-color: rgb(243, 247, 249);
+  --bg-clr: rgb(247, 245, 245);
+  --top-text-color: rgb(0 0 0);
+  --card-bg-color: rgb(255, 255, 255);
+  --card-main-heading: rgb(28, 28, 28);
+  --hover-color: rgb(208, 208, 211);
+  --moz-box-shadow-btn: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); 
+}

@@ -1,0 +1,247 @@
+.main-navbar {
+  background-color: #ffffff !important;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.left-navbar {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo {
+  width: 27%;
+  border-radius: 200px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.middle-navbar {
+  width: 70%;
+}
+
+.middle-navbar ul {
+  list-style: none;
+  margin: 50px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.middle-navbar ul li a {
+  font-family: times, "Times New Roman";
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.middle-navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+.middle-navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.middle-navbar ul li a:hover {
+  color: #000000;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.ham-icon {
+  color: var(--para-clr);
+}
+
+.right-navbar {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .main-navbar {
+    background-color: #ffffff !important;
+  }
+
+  .left-navbar {
+    width: 50%;
+  }
+
+  .company-logo {
+    width: 27%;
+    border-radius: 200px;
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+
+  .middle-navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    background-color: var(--bg-clr);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1;
+  }
+
+  .middle-navbar.active {
+    opacity: 1;
+    visibility: visible;
+    visibility: visible;
+  }
+
+  .middle-navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 0 0;
+    background-color: #000000;
+  }
+
+  .middle-navbar ul li {
+    margin: 15px 0;
+  }
+
+  .middle-navbar ul li a {
+    color: #ffffff;
+  }
+
+  .hamburger-menu {
+    width: 50%;
+    margin-right: 5rem;
+    display: flex;
+    justify-content: right;
+    font-size: 24px;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .ham-icon {
+    color: #000000;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-navbar {
+    background-color: #ffffff !important;
+  }
+
+  .left-navbar {
+    width: 50%;
+  }
+
+  .company-logo {
+    width: 27%;
+    border-radius: 200px;
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+
+  .middle-navbar {
+    background-color: #000000 !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-clr);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1;
+  }
+
+  .middle-navbar.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .middle-navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .middle-navbar ul li {
+    margin: 15px 0;
+  }
+
+  .hamburger-menu {
+    width: 50%;
+    margin-right: 5rem;
+    display: flex;
+    justify-content: right;
+    font-size: 24px;
+    cursor: pointer;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .left-navbar {
+    width: 50%;
+  }
+
+  .middle-navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-clr);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1;
+  }
+
+  .middle-navbar.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .middle-navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .middle-navbar ul li {
+    margin: 13px 0;
+  }
+
+  .hamburger-menu {
+    width: 50%;
+    margin-right: 0rem;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    align-items: center;
+  }
+}

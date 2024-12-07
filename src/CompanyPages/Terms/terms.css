@@ -1,0 +1,25 @@
+.terms-and-conditions{
+    padding: 3rem;
+}
+
+.top-terms{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.terms-content-box h3{
+    font-size: 1.5rem;
+}
+.terms-content-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.terms-header{
+    text-align: center;
+}
+.terms-content-box p{
+
+    font-size: 1.5rem;
+}
