@@ -1,9 +1,13 @@
 .success {
   color: green;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
 .error {
   color: red;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
 .submit-btn:disabled {
@@ -71,13 +75,13 @@
 
   
   .contact-form-wrapper {
-    background-color:var(--bg-clr);
+    background-color: #ffffff;
     border-radius: 10px
   }
   
   @media only screen and (max-width: 900px) {
     .contact-links, .contact-form-wrapper {
-      width: 100%;
+      width: 90%;
     }
     
     .contact-links {

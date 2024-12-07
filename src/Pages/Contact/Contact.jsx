@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./contact.css";
 import ContactImg from "./../../images/chat.gif";
 import Social from "../../components/SocialIcons/Social";
@@ -13,9 +13,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    const API_URL = process.env.REACT_APP_API_URL || "https://10.220.210.167:10000";
-  
+    setLoading(true); // Add this to prevent multiple submissions
+
+    const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
     try {
       const response = await fetch(`${API_URL}/send-email`, {
         method: "POST",
@@ -24,35 +25,35 @@ const Contact = () => {
         },
         body: JSON.stringify({ name, email, message }),
       });
-  
-      // Log the response status and text to help debug
+
       console.log("Response status:", response.status);
+
       const contentType = response.headers.get("Content-Type");
       console.log("Content-Type:", contentType);
-  
+
       if (!contentType || !contentType.includes("application/json")) {
         const text = await response.text();
         throw new Error(`Expected JSON, but got: ${text}`);
       }
-  
+
       const data = await response.json();
-      console.log("Response JSON:", data); // Log the parsed JSON response
-  
+      console.log("Response JSON:", data);
+
       if (response.ok) {
         setStatus(data.message); // Show success message
       } else {
-        setStatus(data.error); // Show error message if response is not OK
+        setStatus(data.error); // Handle server error messages
       }
     } catch (error) {
       console.error("Error during fetch:", error);
       setStatus("Error: " + error.message);
     } finally {
-      setLoading(false);
+      setLoading(false); // Reset loading state
     }
   };
-  
-  
-  
+
+
+
 
   // Automatically clear the status after 5 seconds
   useEffect(() => {
