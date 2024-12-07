@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../../components/HeroSection/Hero";
 import "./about.css";
 import uiDesign from "./../../images/UI-Design.jpg";
@@ -28,7 +27,7 @@ This process includes all stages of the student experience, from the moment of a
         style={{
           width:
             (window.innerWidth >= 1200 && window.innerWidth <= 1440) ||
-            window.innerWidth < 1999
+              window.innerWidth < 1999
               ? "100%"
               : "auto",
           height: "auto",
