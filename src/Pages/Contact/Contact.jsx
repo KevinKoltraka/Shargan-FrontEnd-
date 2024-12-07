@@ -15,7 +15,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true); // Add this to prevent multiple submissions
 
-    const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+    const API_URL = process.env.REACT_APP_API_URL || "https://shargan-server.onrender.com";
 
     try {
       const response = await fetch(`${API_URL}/send-email`, {
