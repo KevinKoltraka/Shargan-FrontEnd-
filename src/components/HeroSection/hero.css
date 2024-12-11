@@ -43,6 +43,10 @@
 
 /* For Tablet */
 @media (max-width: 900px) {
+
+  .right-hero-section-content img {
+    margin-left: 120px;
+  }
   .hero-section {
     display: flex;
     width: 100%;

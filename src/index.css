@@ -6,12 +6,12 @@
 
 html {
   font-size: 62.5%;
-  width: 100%;
+  width: 100% !important;
   scroll-behavior: smooth;
 }
 
 body {
-  width: 100%;
+  width: 100% !important;
   overflow-x: hidden;
   background-color: var(--bg-clr);
 }
@@ -22,22 +22,18 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   font-weight: 900;
-  font-family: 'Kaisei Opti', serif;
+  font-family: "Kaisei Opti", serif;
 
   /* font-family: 'Cinzel', serif; */
 }
 
-
-
-
-
 p {
   color: var(--para-clr);
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
   background-color: #000000;
   color: #ffffff;
@@ -55,18 +51,16 @@ button:hover {
 h2,
 h3 {
   color: #000000;
-  font-family: 'Kaisei Opti', serif;
+  font-family: "Kaisei Opti", serif;
 }
 
 h1 {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-weight: 900;
   cursor: pointer;
   color: var(--main-heading);
   font-size: 2.5rem;
 }
-
-
 
 .button-header {
   padding: 1.5rem;
@@ -77,7 +71,7 @@ h1 {
   border-radius: 5px 5px 5px 5px;
 }
 
-.button-header:hover{
+.button-header:hover {
   background-color: var(--btn-hover);
   color: rgb(255, 255, 255);
 }
@@ -91,5 +85,5 @@ h1 {
   --card-bg-color: rgb(255, 255, 255);
   --card-main-heading: rgb(28, 28, 28);
   --hover-color: rgb(208, 208, 211);
-  --moz-box-shadow-btn: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); 
+  --moz-box-shadow-btn: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
