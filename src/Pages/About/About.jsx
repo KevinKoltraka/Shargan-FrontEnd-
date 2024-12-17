@@ -28,7 +28,7 @@ This process includes all stages of the student experience, from the moment of a
           width:
             (window.innerWidth >= 1200 && window.innerWidth <= 1440) ||
               window.innerWidth < 1999
-              ? "100%"
+              ? "95%"
               : "auto",
           height: "auto",
           marginLeft:
