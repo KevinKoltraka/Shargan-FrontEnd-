@@ -35,8 +35,9 @@
 }
 
 .middle-navbar ul li a {
-  font-family: times, "Times New Roman";
+  font-family: 'Roboto', sans-serif;;
   text-decoration: none;
+  font-weight: normal;
   font-size: 25px;
   color: #000000;
   transition: color 0.2s ease;
