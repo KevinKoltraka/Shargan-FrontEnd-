@@ -1,4 +1,3 @@
-import React from 'react';
 import './services.css';
 import Card from './Cards/Card'
 import OurServices from './../../images/OUR-SERVICES.png'
