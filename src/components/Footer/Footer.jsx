@@ -40,10 +40,10 @@ const Footer = () => {
           <div className="mobile-footer-links">
             <h3>Service</h3>
             <div className="link-in-footer">
-              <li>Marketing Consultancy</li>
-              <li>Sales Consultancy</li>
-              <li>IT Consultancy</li>
-              <li>Human Resources Consultancy</li>
+              <li>Marketing</li>
+              <li>Sales</li>
+              <li>Informatics</li>
+              <li>HR</li>
             </div>
           </div>
         </div>
