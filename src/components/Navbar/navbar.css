@@ -244,6 +244,10 @@
     margin: 13px 0;
   }
 
+  .middle-navbar ul li a {
+    font-size: 1.5rem;
+  }
+
   .hamburger-menu {
     width: 50%;
     margin-right: 0rem;

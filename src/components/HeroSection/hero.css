@@ -110,6 +110,7 @@
   .left-hero-section-content {
     gap: 2rem;
     padding-top: 4rem;
+    margin-top: 0;
   }
   .left-hero-section-content h2 {
     font-size: 2rem;
