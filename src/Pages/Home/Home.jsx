@@ -24,7 +24,6 @@ const Home = () => {
         heroImg={SharganImage} // Main Hero Image
         heroAlt="Shargan Consulting Image"
         staticImage={'./../../images/animationReplacement.jpg'} // New static image
-        classNameLottie={'lottie_css'}
         urlLink={'https://api.whatsapp.com/send?phone=355699305604'}
       />
 
@@ -55,7 +54,7 @@ const Home = () => {
       <div className="home-our-services-section">
         <div className="home-our-services">
           <h2>Some of our Services</h2>
-          <Link to='/services'><button className='home-more-services thisisdarkmode'>View More</button></Link>
+          <Link to='/services'><button className='home-more-services'>View More</button></Link>
         </div>
         <div className='home-our-services-cards'>
           <Card

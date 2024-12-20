@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './card.css';
 import { Link } from 'react-router-dom';
+import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon
 
 const Card = ({
   image,
@@ -63,7 +64,9 @@ const Card = ({
         <div className="button-box">
           <button className="primary-button">{btText1}</button>
           <Link to="https://api.whatsapp.com/send?phone=355699305604" target="_blank">
-            <button className="secondary-button">{btText2}</button>
+            <button className="secondary-button">
+              {btText2} <FaWhatsapp style={{ marginLeft: '8px' }} />
+            </button>
           </Link>
         </div>
       </div>
