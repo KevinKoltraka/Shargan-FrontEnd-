@@ -35,8 +35,9 @@
 }
 
 .middle-navbar ul li a {
-  font-family: times, "Times New Roman";
+  font-family: 'Roboto', sans-serif;;
   text-decoration: none;
+  font-weight: normal;
   font-size: 25px;
   color: #000000;
   transition: color 0.2s ease;
@@ -200,7 +201,7 @@
 
   .hamburger-menu {
     width: 50%;
-    margin-right: 5rem;
+    margin-right: 2.5rem;
     display: flex;
     justify-content: right;
     font-size: 24px;
@@ -243,11 +244,15 @@
     margin: 13px 0;
   }
 
+  .middle-navbar ul li a {
+    font-size: 1.5rem;
+  }
+
   .hamburger-menu {
     width: 50%;
-    margin-right: 0rem;
+    margin-right: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     font-size: 24px;
     cursor: pointer;
     align-items: center;
