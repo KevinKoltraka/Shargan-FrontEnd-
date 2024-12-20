@@ -32,5 +32,6 @@
   }
   .how-we-do-cards{
     display: block;
+    padding: 1rem;
   }
 }

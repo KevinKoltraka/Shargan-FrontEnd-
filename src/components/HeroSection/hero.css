@@ -15,15 +15,21 @@
   flex-direction: column;
   gap: 2rem;
   padding: 8rem;
+  margin-top: 3rem;
 }
 .left-hero-section-content h2 {
   font-size: 4rem;
   color: #ffffff;
+  font-family: "Roboto", sans-serif;
 }
 
 .left-hero-section-content p {
-  font-size: 3.1rem;
+  font-size: 2.5rem;
   color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  word-spacing: normal;
+  text-align: left;
 }
 
 .right-hero-section {
@@ -43,7 +49,6 @@
 
 /* For Tablet */
 @media (max-width: 900px) {
-
   .right-hero-section-content img {
     margin-left: 120px;
   }
@@ -64,7 +69,6 @@
   .left-hero-section-content p {
     font-size: 1.7rem;
   }
-
 }
 
 /* For Tablet */
@@ -106,6 +110,7 @@
   .left-hero-section-content {
     gap: 2rem;
     padding-top: 4rem;
+    margin-top: 0;
   }
   .left-hero-section-content h2 {
     font-size: 2rem;
@@ -131,7 +136,7 @@
   }
 
   .right-hero-section-content {
-    padding: 2rem;
+    padding: 1rem;
   }
   .right-hero-section-content img {
     width: 100% !important;

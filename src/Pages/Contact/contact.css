@@ -31,6 +31,7 @@
 .left-contact h2{
     font-size: 4rem;
     color: purple;
+    font-family: "Roboto", sans-serif;
 }
 
 .left-contact p{
@@ -57,6 +58,10 @@
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.enquiry-form h3 { 
+  font-family: "Roboto", sans-serif;
 }
 
 .mega-contact-box{

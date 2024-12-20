@@ -21,21 +21,30 @@
 .mobile-footer-links h3 {
   font-size: 2.5rem;
   color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subscribe-newsletter h3 {
+  font-family: 'Roboto', sans-serif;
 }
 
 .link-in-footer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: justify;
   list-style: none;
   margin-top: 1rem;
   color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: disc;
 }
 
 .link-in-footer .link {
   color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
 }
 
 .link-in-footer .link:hover {
@@ -131,7 +140,7 @@
     gap: 0.5rem;
     font-size: 1.4rem;
     text-align: justify;
-    list-style: none;
+    list-style-type: disc;
     margin-top: 1rem;
   }
   .subscribe-newsletter {
@@ -178,16 +187,25 @@
 }
 
 @media (max-width: 500px) {
+
+  .link-in-footer .link {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+  
   .footer-section {
     width: 100%;
-    padding: 2rem;
+    padding: 0;
   }
 
   .footer-section-box {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
   }
   .mobile-div {
     display: flex;
@@ -199,7 +217,7 @@
     padding: 2rem;
   }
   .mobile-footer-links h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     word-spacing: normal;
     text-align: left;
   }
@@ -210,7 +228,7 @@
     gap: 0.5rem;
     text-align: justify;
     line-height: 1.4;
-    list-style: none;
+    list-style-type: disc;
     margin-top: 1rem;
   }
   .subscribe-newsletter {

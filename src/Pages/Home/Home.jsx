@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <Hero
         title="Shargan Consulting Agency"
-        description="Shargan Consulting drives business success through tailored HR solutions, recruitment, and leadership development. With expertise in talent growth and custom training, we empower organizations to excel in a competitive market."
+        description="Shargan Consulting enhances business success with customized HR solutions, recruitment, and leadership development to empower organizations in a competitive market."
         btnText="Start a conversation"
         heroImg={SharganImage} // Main Hero Image
         heroAlt="Shargan Consulting Image"

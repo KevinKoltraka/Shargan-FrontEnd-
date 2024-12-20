@@ -13,9 +13,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Add this to prevent multiple submissions
+    setLoading(true);
 
-    const API_URL = process.env.REACT_APP_API_URL || "https://shargan-server.onrender.com";
+    const API_URL =
+      process.env.REACT_APP_API_URL || "https://shargan-server.onrender.com";
 
     try {
       const response = await fetch(`${API_URL}/send-email`, {
@@ -26,34 +27,20 @@ const Contact = () => {
         body: JSON.stringify({ name, email, message }),
       });
 
-      console.log("Response status:", response.status);
-
-      const contentType = response.headers.get("Content-Type");
-      console.log("Content-Type:", contentType);
-
-      if (!contentType || !contentType.includes("application/json")) {
-        const text = await response.text();
-        throw new Error(`Expected JSON, but got: ${text}`);
-      }
-
-      const data = await response.json();
-      console.log("Response JSON:", data);
-
       if (response.ok) {
+        const data = await response.json();
         setStatus(data.message); // Show success message
       } else {
-        setStatus(data.error); // Handle server error messages
+        const error = await response.json();
+        setStatus(error.error || "Something went wrong");
       }
     } catch (error) {
       console.error("Error during fetch:", error);
       setStatus("Error: " + error.message);
     } finally {
-      setLoading(false); // Reset loading state
+      setLoading(false);
     }
   };
-
-
-
 
   // Automatically clear the status after 5 seconds
   useEffect(() => {
@@ -62,7 +49,7 @@ const Contact = () => {
         setStatus("");
       }, 5000);
 
-      return () => clearTimeout(timer); // Cleanup timeout on component unmount or new status
+      return () => clearTimeout(timer);
     }
   }, [status]);
 

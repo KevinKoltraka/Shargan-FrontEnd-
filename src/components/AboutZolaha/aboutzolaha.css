@@ -31,6 +31,7 @@
   font-size: 2.5rem;
   text-align: justify;
   color: #ffffff;
+  font-family: 'Roboto', sans-serif;
 }
 
 .about-company-scene {
@@ -39,6 +40,8 @@
 
 .about-company-scene h2 {
   color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
 }
 
 .about-company-details {
@@ -52,6 +55,7 @@
   font-size: 1.6rem;
   word-spacing: normal; /* Reset word-spacing to default */
   text-align: left; /* Change to left-align if justification is not desired */
+  font-family: 'Roboto', sans-serif;
 }
 
 .company-facilities {
@@ -65,6 +69,7 @@
 
 .company-facilities .checklist-company p {
   color: #ffffff;
+  font-family: 'Roboto', sans-serif;
 }
 
 .btn-about-zolaha {

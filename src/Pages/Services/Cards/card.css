@@ -9,6 +9,21 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.view-more {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+
+.view-more:hover {
+  text-decoration: underline;
+}
+
+
 .cards-box:hover {
   transform: translateY(-10px); /* Slightly lifts the card */
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
@@ -29,13 +44,14 @@
 }
 
 .cards-inside img {
-  width: 100%;
+  width: 50%;
   aspect-ratio: 1/1;
 }
 
 .card-title {
   color: #000000;
   font-size: 2.2rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card-para {
@@ -44,6 +60,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card-label {
@@ -88,6 +105,7 @@
 
   .button-box {
     display: flex;
+    margin-top: 2rem;
   }
 
   .primary-button {
