@@ -14,11 +14,12 @@
   scroll-behavior: smooth;
   width: 100%;
   padding: 4rem 0;
-  gap: 15rem;
+  gap: 10rem;
 }
 
 .brand-partners img {
   width: 10%;
+  height: 10%;
   border: none;
   border-radius: 40px;
   background: #000000;
@@ -28,7 +29,7 @@
 /* Responsive adjustments */
 @media (max-width: 980px) {
   .brand-partners {
-    gap: 5rem;
+    gap: 2.5rem;
   }
 
   .brand-partners-container {
@@ -47,7 +48,7 @@
 
 @media (max-width: 500px) {
   .brand-partners {
-    gap: 4.5rem;
+    gap: 1.9rem;
   }
 
   .brand-partners-container {
@@ -63,6 +64,10 @@
 }
 
 @media (max-width: 416px) {
+  .brand-partners {
+    gap: 2.4rem;
+  }
+
   .brand-partners-container {
     width: 100%;
     overflow-x: auto;
@@ -78,7 +83,7 @@
 
 @media (max-width: 351px) {
   .brand-partners {
-    gap: 3.7rem;
+    gap: 2.7rem;
   }
 
   .brand-partners-container {
