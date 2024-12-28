@@ -1,7 +1,7 @@
 .footer-section {
   width: 100%;
   padding: 2rem;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 .footer-section-box {
@@ -20,12 +20,12 @@
 }
 .mobile-footer-links h3 {
   font-size: 2.5rem;
-  color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
 }
 
 .subscribe-newsletter h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .link-in-footer {
@@ -36,19 +36,19 @@
   text-align: justify;
   list-style: none;
   margin-top: 1rem;
-  color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
   list-style-type: disc;
 }
 
 .link-in-footer .link {
-  color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
 }
 
 .link-in-footer .link:hover {
-  color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 .subscribe-newsletter {
@@ -61,13 +61,13 @@
 }
 .subscribe-newsletter h3 {
   font-size: 1.8rem;
-  color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 .subscribe-newsletter input {
   padding: 1rem;
-  border: none;
+  border: 3px solid black;
   width: 50%;
-  border-radius: 2px;
+  border-radius: 8px;
   outline: none;
 }
 .subscribe-newsletter button {
@@ -156,9 +156,7 @@
   }
   .subscribe-newsletter input {
     padding: 1rem;
-    border: none;
     width: 100%;
-    border-radius: 0px;
   }
   .subscribe-newsletter button {
     padding: 1rem;
@@ -187,14 +185,12 @@
 }
 
 @media (max-width: 500px) {
-
   .link-in-footer .link {
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: normal;
     font-size: 1.5rem;
   }
-  
+
   .footer-section {
     width: 100%;
     padding: 0;
@@ -244,9 +240,7 @@
   }
   .subscribe-newsletter input {
     padding: 1rem;
-    border: none;
     width: 100%;
-    border-radius: 0px;
   }
   .subscribe-newsletter button {
     padding: 1rem;
