@@ -81,7 +81,8 @@
   
   .contact-form-wrapper {
     background-color: #ffffff;
-    border-radius: 10px
+    border-radius: 10px;
+    margin-bottom: 3rem;
   }
   
   @media only screen and (max-width: 900px) {
@@ -94,7 +95,7 @@
     }
     
     .contact-form-wrapper {
-      border-radius: 0 0 10px 10px;
+      border-radius: 10px;
     }
   }
   
