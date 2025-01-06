@@ -29,14 +29,14 @@ const Contact = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setStatus(data.message); // Show success message
+        setStatus("Email sent successfully!"); // Success message
       } else {
         const error = await response.json();
-        setStatus(error.error || "Something went wrong");
+        setStatus(error.error || "Something went wrong.");
       }
     } catch (error) {
       console.error("Error during fetch:", error);
-      setStatus("Error: " + error.message);
+      setStatus("Failed to send email. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -77,6 +77,7 @@ const Contact = () => {
                 type="text"
                 name="sender"
                 required
+                placeholder="Enter your name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -87,6 +88,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 required
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -96,6 +98,7 @@ const Contact = () => {
               <textarea
                 name="message"
                 required
+                placeholder="Enter your message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
@@ -107,7 +110,7 @@ const Contact = () => {
           </form>
           <div>
             {status && (
-              <p className={status.startsWith("Error") ? "error" : "success"}>
+              <p className={status.includes("Failed") ? "error" : "success"}>
                 {status}
               </p>
             )}
