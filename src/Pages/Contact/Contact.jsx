@@ -29,7 +29,8 @@ const Contact = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setStatus("Email sent successfully!"); // Success message
+        console.log("Response data:", data); // Use the data for debugging or display
+        setStatus(data.message || "Email sent successfully!"); // Show a success message from the response if available
       } else {
         const error = await response.json();
         setStatus(error.error || "Something went wrong.");
