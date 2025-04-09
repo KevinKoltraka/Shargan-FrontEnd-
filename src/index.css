@@ -12,9 +12,19 @@ html {
 }
 
 body {
+  margin-top: 9rem;
   width: 100% !important;
   overflow-x: hidden;
   background-color: var(--bg-clr);
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin-top: 5rem;
+    width: 100% !important;
+    overflow-x: hidden;
+    background-color: var(--bg-clr);
+  }
 }
 
 .link {
@@ -65,16 +75,29 @@ h1 {
 
 .button-header {
   padding: 1.5rem;
-  color: rgb(0 0 0);
+  color: rgb(0, 0, 0);
   font-size: 1.67rem;
   border: none;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px 5px 5px 5px;
+  background-color: rgb(255, 255, 255); /* ensure initial background */
+  border-radius: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  box-shadow: none;
 }
 
 .button-header:hover {
-  background-color: var(--btn-hover);
-  color: rgb(255, 255, 255);
+  background: aliceblue;
+  color: rgb(0, 0, 0);
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: none;
+}
+
+.button-header:focus,
+.button-header:active {
+  background-color: rgb(
+    255,
+    255,
+    255
+  ) !important; /* Force the background to stay white during focus or active states */
 }
 
 .light-theme {

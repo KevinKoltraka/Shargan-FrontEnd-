@@ -3,7 +3,7 @@
   width: 100%;
   padding-bottom: 0rem;
   padding-left: 0rem;
-  background-color: #000000;
+  background: linear-gradient(135deg, #34495e, #bdc3c7);
 }
 
 .left-hero-section {
@@ -17,20 +17,31 @@
   padding: 8rem;
   margin-top: 3rem;
 }
+
 .left-hero-section-content h2 {
   font-size: 4rem;
-  color: #ffffff;
+  background: linear-gradient(135deg, #000000, #222222, #444444);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-family: "Roboto", sans-serif;
 }
 
 .left-hero-section-content p {
+  margin: 0;
   font-size: 2.5rem;
-  color: #ffffff;
+  background: linear-gradient(135deg, #000000, #222222, #444444);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   word-spacing: normal;
   text-align: left;
 }
+
 
 .right-hero-section {
   width: 50%;
@@ -43,9 +54,35 @@
   width: 50%;
   margin-top: 3.5rem;
   margin-left: 200px;
-  border-radius: 15px;
-  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: none;
+  transform: scale(0.8); /* Initial smaller size */
+  opacity: 0;
+  animation: imageAnimation 1.5s ease-out forwards;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for zoom */
 }
+
+.right-hero-section-content img:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+@keyframes imageAnimation {
+  0% {
+    transform: scale(0.8) translateY(20px); /* Start smaller and below */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05) translateY(-10px); /* Scale up and move slightly up */
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) translateY(0); /* Final state - normal size */
+    opacity: 1;
+  }
+}
+
+
+
 
 /* For Tablet */
 @media (max-width: 900px) {
