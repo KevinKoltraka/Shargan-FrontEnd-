@@ -9,6 +9,8 @@ html {
   width: 100% !important;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  /*background: linear-gradient(135deg, #34495e, #bdc3c7);*/
+  background: linear-gradient(135deg, #dbe6f6, #c5796d) !important;
 }
 
 body {
