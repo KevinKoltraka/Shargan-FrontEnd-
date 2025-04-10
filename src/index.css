@@ -9,8 +9,14 @@ html {
   width: 100% !important;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  /*background: linear-gradient(135deg, #34495e, #bdc3c7);*/
-  background: linear-gradient(135deg, #dbe6f6, #c5796d) !important;
+  background: linear-gradient(
+    135deg,
+    #FFFFFF 0%,
+    #F8F9FD 25%,
+    #F2F3FB 50%,
+    #ECEEF9 75%,
+    #E6E8F7 100%
+  );
 }
 
 body {
@@ -80,26 +86,21 @@ h1 {
   color: rgb(0, 0, 0);
   font-size: 1.67rem;
   border: none;
-  background-color: rgb(255, 255, 255); /* ensure initial background */
+  background-color: aquamarine; /* ensure initial background */
   border-radius: 1rem;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   box-shadow: none;
 }
 
 .button-header:hover {
-  background: aliceblue;
-  color: rgb(0, 0, 0);
+  background: aquamarine;
   transform: scale(1.1); /* Slight zoom effect */
   box-shadow: none;
 }
 
 .button-header:focus,
 .button-header:active {
-  background-color: rgb(
-    255,
-    255,
-    255
-  ) !important; /* Force the background to stay white during focus or active states */
+  background-color: rgb(46, 46, 46) !important; /* Force the background to stay white during focus or active states */
 }
 
 .light-theme {

@@ -3,10 +3,17 @@
   width: 35rem;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 2px 5px 0px rgb(0, 0, 0);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.cards-box:hover {
+  transform: scale(1.05);
+  -webkit-box-shadow: 5px 5px 15px rgb(0, 0, 0);
+  -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
 }
 
 .view-more {
@@ -23,13 +30,6 @@
   text-decoration: underline;
 }
 
-
-.cards-box:hover {
-  transform: translateY(-10px); /* Slightly lifts the card */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
-  -webkit-box-shadow: 5px 5px 15px rgb(0, 0, 0);
-  -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-}
 
 .cards-inside {
   color: #f5f0f0;
@@ -51,7 +51,7 @@
 .card-title {
   color: #000000;
   font-size: 2.2rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .card-para {
@@ -60,7 +60,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .card-label {
@@ -76,21 +76,26 @@
 }
 
 .primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px;
   border: 1px solid gray;
   border-radius: 10px;
   width: auto;
+  height: 35px;
   color: rgb(245, 248, 248);
   background-color: rgb(0, 0, 0);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 2px 5px 0px rgb(80, 78, 78);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px 5px 5px 5px;
+  box-shadow: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .primary-button:hover {
   color: rgb(245, 248, 248);
   background-color: rgb(0, 0, 0);
+  transform: scale(1.05);
 }
 
 .secondary-button {
@@ -101,13 +106,16 @@
   border: 1px solid gray;
   border-radius: 10px;
   width: auto;
+  height: 35px;
   color: rgb(0, 0, 0);
-  background-color: #25D366;
-  
+  background-color: #8ff8b5;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .secondary-button i {
-  margin-left: 8px; /* Adds space between text and icon */
+  margin-left: 8px;
+  transform: scale(1.05);
 }
 
 .secondary-button:hover {
