@@ -151,6 +151,7 @@ a {
 
 @media (max-width: 500px) {
   .cards-box {
-    margin-bottom: 25px;
+    width: 90%;
+    margin-bottom: 10px;
   }
 }

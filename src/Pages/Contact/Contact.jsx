@@ -73,6 +73,7 @@ const Contact = () => {
             <div className="enquiry-form">
               <h3>Enquiry Form</h3>
             </div>
+            <div className="forms-item">
             <div className="form-item">
               <input
                 type="text"
@@ -104,6 +105,7 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
               />
               <label>Message:</label>
+            </div>
             </div>
             <button type="submit" className="submit-btn" disabled={loading}>
               {loading ? "Sending..." : "Send"}

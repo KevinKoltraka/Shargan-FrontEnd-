@@ -152,8 +152,12 @@
     padding: 2rem 1rem;
   }
 
+  .left-about-zolaha-section img {
+    max-width: 95%;
+  }
+
   .about-company-name h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .about-company-scene h2 {
@@ -162,6 +166,6 @@
 
   .about-company-details p,
   .checklist-company p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 }

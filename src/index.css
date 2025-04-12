@@ -70,7 +70,7 @@ button:hover {
 h2,
 h3 {
   color: #000000;
-  font-family: "Kaisei Opti", serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1 {
@@ -82,9 +82,14 @@ h1 {
 }
 
 .button-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   padding: 1.5rem;
   color: rgb(0, 0, 0);
-  font-size: 1.67rem;
+  font-size: 1.2rem;
   border: none;
   background-color: aquamarine; /* ensure initial background */
   border-radius: 1rem;
@@ -114,3 +119,10 @@ h1 {
   --hover-color: rgb(208, 208, 211);
   --moz-box-shadow-btn: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
+@media (max-width:500px){ 
+  h2 {
+  margin-top: 3rem;
+}
+}
+

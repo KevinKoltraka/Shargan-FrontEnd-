@@ -14,7 +14,6 @@
 }
 
 .who-we-are-section {
-  flex-direction: row-reverse;
   padding-left: 6rem;
   padding-right: 6rem;
 }
@@ -98,7 +97,6 @@
   }
 
   .who-we-are-section {
-    flex-direction: row-reverse;
     padding-left: 0rem;
     padding-right: 0rem;
   }

@@ -1,14 +1,12 @@
 .our-services{
   text-align: center;
   font-size: 3rem;
-  background-color: #000000;
 }
   .how-we-do-cards{
     display: flex;
     gap: 3rem;
     padding: 4rem;
     justify-content: center;
-    background-color: #000000;
   }
 
   
@@ -31,7 +29,10 @@
     font-size: 2rem;
   }
   .how-we-do-cards{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
   }
 }
