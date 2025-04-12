@@ -1,7 +1,7 @@
 .footer-section {
   width: 100%;
   padding: 2rem;
-  background: linear-gradient(to top, #222, #ffffff);
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
 }
 
 .footer-section-box {
@@ -14,10 +14,12 @@
   width: 100%;
   margin-top: 1rem;
 }
+
 .mobile-footer-links {
   width: 50%;
   padding: 2rem;
 }
+
 .mobile-footer-links h3 {
   font-size: 2.5rem;
   color: rgb(0, 0, 0);
@@ -59,10 +61,12 @@
   gap: 1rem;
   padding: 2rem;
 }
+
 .subscribe-newsletter h3 {
   font-size: 1.8rem;
   color: rgb(0, 0, 0);
 }
+
 .subscribe-newsletter input {
   padding: 1rem;
   border: 1px solid black;
@@ -70,6 +74,7 @@
   border-radius: 8px;
   outline: none;
 }
+
 .subscribe-newsletter button {
   padding: 1rem;
   width: 10rem;
@@ -80,7 +85,7 @@
   color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .subscribe-newsletter button:hover {
@@ -89,6 +94,7 @@
   transform: scale(1.05) translateY(-3px);
   box-shadow: none;
 }
+
 .copyright-section {
   width: 100%;
   padding: 1rem;
@@ -107,7 +113,7 @@
   margin-top: 1rem;
   font-size: 1.2rem;
   text-align: center;
-  color:rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 @media (max-width: 900px) {
@@ -122,15 +128,18 @@
     flex-direction: column;
     padding: 2rem;
   }
+
   .mobile-div {
     display: flex;
     width: 100%;
     margin-top: 1rem;
   }
+
   .mobile-footer-links {
     width: 50%;
     padding: 2rem;
   }
+
   .mobile-footer-links h3 {
     font-size: 1.6rem;
   }
@@ -144,6 +153,7 @@
     list-style-type: disc;
     margin-top: 1rem;
   }
+
   .subscribe-newsletter {
     width: 100%;
     display: flex;
@@ -152,13 +162,16 @@
     gap: 1rem;
     padding: 2rem;
   }
+
   .subscribe-newsletter h3 {
     font-size: 1.8rem;
   }
+
   .subscribe-newsletter input {
     padding: 1rem;
     width: 100%;
   }
+
   .subscribe-newsletter button {
     padding: 1rem;
     width: 10rem;
@@ -166,6 +179,7 @@
     border-radius: 5px;
     align-self: center;
   }
+
   .copyright-section {
     width: 100%;
     padding: 1rem;
@@ -204,15 +218,18 @@
     padding: 0.5rem;
     margin-left: 1rem;
   }
+
   .mobile-div {
     display: flex;
     width: 100%;
     margin-top: 1rem;
   }
+
   .mobile-footer-links {
     width: 50%;
     padding: 2rem;
   }
+
   .mobile-footer-links h3 {
     font-size: 1.5rem;
     word-spacing: normal;
@@ -228,6 +245,7 @@
     list-style-type: disc;
     margin-top: 1rem;
   }
+
   .subscribe-newsletter {
     width: 100%;
     display: flex;
@@ -236,13 +254,16 @@
     gap: 1rem;
     padding: 2rem;
   }
+
   .subscribe-newsletter h3 {
     font-size: 1.8rem;
   }
+
   .subscribe-newsletter input {
     padding: 1rem;
     width: 100%;
   }
+
   .subscribe-newsletter button {
     padding: 1rem;
     width: 10rem;
@@ -250,6 +271,7 @@
     border-radius: 5px;
     align-self: center;
   }
+
   .copyright-section {
     width: 100%;
     padding: 1rem;

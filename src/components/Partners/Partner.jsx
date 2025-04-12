@@ -31,22 +31,50 @@ const Partner = () => {
     };
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        when: "beforeChildren",
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      scale: 0.95 
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 120,
+        damping: 20,
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <div className="brand-partners-container">
       <motion.div
         className="brand-partners"
         ref={scrollRef}
-        initial={{ x: "-100%" }}
-        animate={{ x: inView ? 0 : "-100%" }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
       >
         <a href="https://www.9dotsagency.com/" target="_blank" rel="noopener noreferrer">
           <motion.img
             src={Dots1}
             alt="9Dots"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            variants={itemVariants}
           />
         </a>
 
@@ -54,9 +82,7 @@ const Partner = () => {
           <motion.img
             src={Dots2}
             alt="Unimetropolitan"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
+            variants={itemVariants}
           />
         </a>
 
@@ -64,9 +90,7 @@ const Partner = () => {
           <motion.img
             src={Dots3}
             alt="Getex"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
+            variants={itemVariants}
           />
         </a>
 
@@ -74,9 +98,7 @@ const Partner = () => {
           <motion.img
             src={Dots4}
             alt="Flex"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.7, delay: 0.9 }}
+            variants={itemVariants}
           />
         </a>
 
@@ -84,9 +106,7 @@ const Partner = () => {
           <motion.img
             src={Dots5}
             alt="WBU"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.7, delay: 1.1 }}
+            variants={itemVariants}
           />
         </a>
 
@@ -94,9 +114,7 @@ const Partner = () => {
           <motion.img
             src={Dots6}
             alt="Coaching"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.7, delay: 1.3 }}
+            variants={itemVariants}
           />
         </a>
       </motion.div>
