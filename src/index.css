@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'MyCustomFont'; /* Choose any name */
+  src: url('/fonts/MYRIADPRO-REGULAR.OTF') format('opentype'); /* use correct path & formats */
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,21 +16,12 @@ html {
   width: 100% !important;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background: linear-gradient(
-    135deg,
-    #FFFFFF 0%,
-    #F8F9FD 25%,
-    #F2F3FB 50%,
-    #ECEEF9 75%,
-    #E6E8F7 100%
-  );
 }
 
 body {
   margin-top: 9rem;
   width: 100% !important;
   overflow-x: hidden;
-  background-color: var(--bg-clr);
 }
 
 @media screen and (max-width: 800px) {
@@ -41,7 +39,6 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   font-weight: 900;
-  font-family: "Kaisei Opti", serif;
 
   /* font-family: 'Cinzel', serif; */
 }
@@ -88,17 +85,19 @@ h1 {
   justify-content: center;
   gap: 1rem;
   padding: 1.5rem;
-  color: rgb(0, 0, 0);
-  font-size: 1.2rem;
+  color: #0e4c71;
+  font-size: 1.7rem;
+  font-weight: 600;
   border: none;
-  background-color: aquamarine; /* ensure initial background */
+  background-color: #ffffff; /* ensure initial background */
   border-radius: 1rem;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   box-shadow: none;
 }
 
 .button-header:hover {
-  background: aquamarine;
+  background-color: #ffb100; /* ensure initial background */
+  color: #0e4c71;
   transform: scale(1.1); /* Slight zoom effect */
   box-shadow: none;
 }

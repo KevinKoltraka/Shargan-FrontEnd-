@@ -1,11 +1,16 @@
 /* navbar.css */
 :root {
-  --primary-color: #ffffff;
-  --secondary-color: #009ffd;
-  --text-color: #000000;
-  --hover-color: #000000;
-  --nav-bg: rgba(255, 255, 255, 0.95);
+  --text-color: #ffffff;
+  --hover-color: #ffb100;
+  --nav-bg: #0e4c71;
   --transition-speed: 0.3s;
+}
+
+@font-face {
+  font-family: 'MyCustomFont'; /* Choose any name */
+  src: url('/fonts/MYRIADPRO-REGULAR.OTF') format('opentype'); /* use correct path & formats */
+  font-weight: normal;
+  font-style: normal;
 }
 
 .main-navbar {
@@ -55,7 +60,7 @@
 }
 
 .link {
-  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: var(--text-color);
   text-decoration: none;
   font-size: 2.2rem;

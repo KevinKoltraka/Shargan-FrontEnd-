@@ -1,4 +1,11 @@
 /* About Zolaha Section Styles */
+@font-face {
+  font-family: 'MyCustomFont'; /* Choose any name */
+  src: url('/fonts/MYRIADPRO-REGULAR.OTF') format('opentype'); /* use correct path & formats */
+  font-weight: normal;
+  font-style: normal;
+}
+
 [class*="about-zolaha-section"] {
   display: flex;
   flex-direction: row;
@@ -40,31 +47,31 @@
 /* Company Name */
 .about-company-name h3 {
   font-size: 2.7rem;
-  color: #000000;
+  color: #ffffff;
   margin: 0;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Cambria";
 }
 
 /* Company Scene/Headline */
 .about-company-scene h2 {
-  font-size: 2.2rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #000000;
+  font-size: 2rem;
+  font-family: "MyCustomFont";
+  color: #ffffff;
   margin: 0.5rem 0;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
 
 /* Company Details */
 .about-company-details p {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: 500;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'MyCustomFont';
   line-height: 1.6;
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
@@ -84,13 +91,13 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
-  color: #000000;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 /* Icon styling */
 .checklist-company p svg {
-  color: #000000;
+  color: #ffffff;
   font-size: 1.25rem;
   flex-shrink: 0;
 }

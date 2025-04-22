@@ -1,49 +1,63 @@
+@font-face {
+  font-family: "MyCustomFont"; /* Choose any name */
+  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype"); /* use correct path & formats */
+  font-weight: normal;
+  font-style: normal;
+}
+
 .hero-section {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 80vh;
   padding-bottom: 0rem;
   padding-left: 0rem;
-
+  background-image: url("/pexels-ingo-188035.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  clip-path: ellipse(150% 100% at 50% 0%);
 }
 
 .left-hero-section {
-  width: 50%;
+  width: 100%;
 }
 
 .left-hero-section-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: 8rem;
-  margin-top: 3rem;
+  gap: 0rem;
+  padding: 2rem 0 2rem 8rem;
+  margin-top: 0rem;
+
+  border-radius: 40px;
 }
 
 .left-hero-section-content h2 {
-  font-size: 4rem;
-  background: linear-gradient(135deg, #000000, #222222, #444444);
+  font-size: 8rem;
+  background: #ffffff;
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: "Roboto", sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .left-hero-section-content p {
-  margin: 0 0 3rem 0;
-  font-size: 2.5rem;
-  background: linear-gradient(135deg, #000000, #222222, #444444);
+  margin: 0 0 7rem 0;
+  font-weight: bold;
+  font-size: 8rem;
+  background: #ffb100;
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
+  font-family: "Cambria";
   word-spacing: normal;
   text-align: left;
 }
-
 
 .right-hero-section {
   width: 50%;
@@ -90,9 +104,6 @@
     opacity: 1;
   }
 }
-
-
-
 
 /* For Tablet */
 @media (max-width: 900px) {

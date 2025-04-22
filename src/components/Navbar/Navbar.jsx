@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from 'framer-motion'; // Import Framer Motion
-import zolaha from './../../images/shargan.jpg';
+import zolaha from './../../images/Logo.svg';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);

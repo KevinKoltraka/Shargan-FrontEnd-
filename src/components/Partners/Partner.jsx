@@ -36,7 +36,7 @@ const Partner = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.22, // Slightly faster than original 0.3
         when: "beforeChildren",
       }
     }
@@ -45,7 +45,7 @@ const Partner = () => {
   const itemVariants = {
     hidden: { 
       opacity: 0, 
-      y: 30,
+      y: 25, // Slightly less distance than original 30
       scale: 0.95 
     },
     visible: {
@@ -54,9 +54,9 @@ const Partner = () => {
       scale: 1,
       transition: {
         type: "spring",
-        stiffness: 120,
-        damping: 20,
-        duration: 0.5
+        stiffness: 150, // Slightly higher than original 120
+        damping: 18, // Slightly lower than original 20
+        duration: 0.4 // Slightly faster than original 0.5
       }
     }
   };
@@ -75,6 +75,7 @@ const Partner = () => {
             src={Dots1}
             alt="9Dots"
             variants={itemVariants}
+            loading="lazy"
           />
         </a>
 
@@ -83,6 +84,7 @@ const Partner = () => {
             src={Dots2}
             alt="Unimetropolitan"
             variants={itemVariants}
+            loading="lazy"
           />
         </a>
 
@@ -91,6 +93,7 @@ const Partner = () => {
             src={Dots3}
             alt="Getex"
             variants={itemVariants}
+            loading="lazy"
           />
         </a>
 
@@ -99,6 +102,7 @@ const Partner = () => {
             src={Dots4}
             alt="Flex"
             variants={itemVariants}
+            loading="lazy"
           />
         </a>
 
@@ -107,6 +111,7 @@ const Partner = () => {
             src={Dots5}
             alt="WBU"
             variants={itemVariants}
+            loading="lazy"
           />
         </a>
 
@@ -115,6 +120,7 @@ const Partner = () => {
             src={Dots6}
             alt="Coaching"
             variants={itemVariants}
+            loading="lazy"
           />
         </a>
       </motion.div>
