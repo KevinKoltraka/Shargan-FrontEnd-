@@ -58,7 +58,7 @@ const Contact = () => {
     <>
       <Hero
         title="Contact Us"
-        description="We’d love to hear from you! Feel free to reach out with any questions, feedback, or inquiries, and we’ll get back to you as soon as possible."
+        description=""
         heroImg={ContactImg}
         urlLink="https://api.whatsapp.com/send?phone=355699305604"
       />

@@ -15,8 +15,8 @@ const Services = () => {
   return (
     <>
       <Hero
-      title="Unlocking Potential through Strategic Solutions"
-      description="We offer expert guidance across key business areas, including workforce optimization, financial planning, IT infrastructure, marketing strategies, and sales growth. Our services are designed to help companies enhance performance, streamline operations, and build strong brands, ensuring long-term success and adaptability in a competitive market"
+      title="Unlocking Potential"
+      description="through Strategic Solutions"
       btnText="Contact Us or Scroll Down for More Information"
       heroImg={ServiceImg}
         heroAlt="Digital Success"

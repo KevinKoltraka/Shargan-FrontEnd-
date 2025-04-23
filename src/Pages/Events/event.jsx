@@ -14,8 +14,8 @@ const Events = () => {
     <div id="Events">
       <Hero
         title="Upcoming Events"
-        subtitle="Discover, Learn, Connect"
-        description="Join us at our upcoming events designed to inspire, educate, and connect. Whether you’re looking to gain insights, network with industry leaders, or spark new ideas, our events are tailored to bring meaningful experiences to life."
+        subtitle=""
+        description=""
         btnText="Register Now!"
         urlLink={
           "https://api.whatsapp.com/send?phone=918736082960&text=Hiii%20!!%20%F0%9F%99%83"
