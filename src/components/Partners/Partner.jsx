@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import "./partner.css";
-import Dots1 from "./BrandImages/9Dots.svg";
+import Dots1 from "./BrandImages/9DOTS.svg";
 import Dots2 from "./BrandImages/unimetropolitan.svg";
 import Dots3 from "./BrandImages/getex.svg";
 import Dots4 from "./BrandImages/flex.svg";
@@ -9,20 +9,30 @@ import Dots6 from "./BrandImages/coachingLogo.svg";
 
 const Partner = () => {
   const scrollerRef = useRef(null);
-  
+
   useEffect(() => {
     if (!scrollerRef.current) return;
-    
-    // Clone the logos to create the infinite effect
+
     const scrollerContent = scrollerRef.current;
     const scrollerInner = scrollerContent.querySelector(".scroller-inner");
+
+    // Check if we already cloned items (prevent duplicating on hot reload)
+    const alreadyCloned = scrollerInner.getAttribute("data-cloned") === "true";
+    if (alreadyCloned) return;
+
+    // Clone the logos to create the infinite effect - duplicate the entire set multiple times
     const logoElements = Array.from(scrollerInner.children);
     
-    // Clone each logo and append to create the seamless effect
-    logoElements.forEach(item => {
-      const clone = item.cloneNode(true);
-      scrollerInner.appendChild(clone);
-    });
+    // Adding multiple copies for smoother infinite scrolling
+    for (let i = 0; i < 3; i++) {
+      logoElements.forEach(item => {
+        const clone = item.cloneNode(true);
+        scrollerInner.appendChild(clone);
+      });
+    }
+
+    // Mark as cloned to prevent duplicating on hot reload
+    scrollerInner.setAttribute("data-cloned", "true");
 
     return () => {
       // Cleanup if needed
@@ -31,7 +41,7 @@ const Partner = () => {
 
   return (
     <div className="partners-section">
-      <div className="scroller" ref={scrollerRef} data-speed="slow">
+      <div className="scroller" ref={scrollerRef}>
         <div className="scroller-inner">
           <a href="https://www.9dotsagency.com/" target="_blank" rel="noopener noreferrer" className="partner-item">
             <img src={Dots1} alt="9Dots" loading="lazy" />
