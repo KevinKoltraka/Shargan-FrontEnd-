@@ -51,9 +51,6 @@ const About = () => {
         Checklist1="Academic programs in Albania"
         Checklist2="Universities in Albania"
         Checklist3="Cost of living in Albania for students"
-        Checklist4="Scholarship opportunities Albania"
-        Checklist5="Shargan Consulting education"
-        Checklist6="Study in Albania assistance"
       />
 
       <AboutZolaha
