@@ -14,7 +14,7 @@
   height: 80vh;
   padding-bottom: 0rem;
   padding-left: 0rem;
-  background-image: url("/pexels-ingo-188035.jpg"); 
+  background-image: url("/pexels-ingo-188035.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,10 +28,10 @@
 .left-hero-section-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 0rem;
-  padding: 2rem 0 2rem 8rem;
   margin-top: 0rem;
-
   border-radius: 40px;
 }
 
@@ -160,7 +160,10 @@
 /* Responsive navbar For Mobile */
 @media (max-width: 500px) {
   .hero-section {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 0rem;
     /* height: 100vh; */
@@ -172,18 +175,24 @@
 
   .left-hero-section-content {
     gap: 2rem;
-    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0 0 0 ;
     margin-top: 0;
+
   }
 
   .left-hero-section-content h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
   }
 
   .left-hero-section-content p {
-    font-size: 1.5rem;
+    font-size: 4rem;
     text-align: center;
+    margin: 0;
   }
 
   .send-message {
@@ -209,5 +218,9 @@
   .right-hero-section-content img {
     width: 70% !important;
     margin-left: 0px;
+  }
+
+  .button-header {
+    font-size: 1.4rem;
   }
 }

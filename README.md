@@ -1,1 +1,2 @@
-Your getway to study in Europe
+#0e4c71
+#ffb100

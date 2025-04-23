@@ -1,14 +1,14 @@
 .our-partners-homepage {
   width: 100%;
   padding: 2rem;
-  background: #0e4c71;
+  background: linear-gradient(135deg, #072c45 0%, #0e4c71 25%, #1a6596 50%, #0e4c71 75%, #072c45 100%);
 }
 
 .our-partners-homepage h2 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 3rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 4rem;
   margin-bottom: 2rem;
-  margin-top: 7rem;
+  margin-top: 3rem;
   text-align: center;
   color: #ffffff;
 }
@@ -108,5 +108,11 @@
     margin: 0 !important;
     width: 100%;
     padding: 1rem;
+  }
+  .our-partners-homepage h2 {
+    margin-top: 2rem;
+  }
+  .partners-section {
+    padding: 2rem 0;
   }
 }

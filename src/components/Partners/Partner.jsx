@@ -1,129 +1,63 @@
-import { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
 import "./partner.css";
-import Dots2 from "./BrandImages/unimetropolitan.png";
-import Dots3 from "./BrandImages/getex.png";
-import Dots4 from "./BrandImages/flex.png";
-import Dots5 from "./BrandImages/wbu.png";
-import Dots6 from "./BrandImages/coachingLogo.jpg";
-import Dots1 from "./BrandImages/9Dots.jpg";
+import Dots1 from "./BrandImages/9Dots.svg";
+import Dots2 from "./BrandImages/unimetropolitan.svg";
+import Dots3 from "./BrandImages/getex.svg";
+import Dots4 from "./BrandImages/flex.svg";
+import Dots5 from "./BrandImages/wbu.svg";
+import Dots6 from "./BrandImages/coachingLogo.svg";
 
 const Partner = () => {
-  const scrollRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
+  const scrollerRef = useRef(null);
+  
   useEffect(() => {
-    const currentRef = scrollRef.current;
-
-    const checkInView = () => {
-      if (currentRef) {
-        const rect = currentRef.getBoundingClientRect();
-        const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
-        setInView(inViewport);
-      }
-    };
-
-    window.addEventListener("scroll", checkInView);
-    checkInView();
+    if (!scrollerRef.current) return;
+    
+    // Clone the logos to create the infinite effect
+    const scrollerContent = scrollerRef.current;
+    const scrollerInner = scrollerContent.querySelector(".scroller-inner");
+    const logoElements = Array.from(scrollerInner.children);
+    
+    // Clone each logo and append to create the seamless effect
+    logoElements.forEach(item => {
+      const clone = item.cloneNode(true);
+      scrollerInner.appendChild(clone);
+    });
 
     return () => {
-      window.removeEventListener("scroll", checkInView);
+      // Cleanup if needed
     };
   }, []);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.22, // Slightly faster than original 0.3
-        when: "beforeChildren",
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 25, // Slightly less distance than original 30
-      scale: 0.95 
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 150, // Slightly higher than original 120
-        damping: 18, // Slightly lower than original 20
-        duration: 0.4 // Slightly faster than original 0.5
-      }
-    }
-  };
-
   return (
-    <div className="brand-partners-container">
-      <motion.div
-        className="brand-partners"
-        ref={scrollRef}
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
-        <a href="https://www.9dotsagency.com/" target="_blank" rel="noopener noreferrer">
-          <motion.img
-            src={Dots1}
-            alt="9Dots"
-            variants={itemVariants}
-            loading="lazy"
-          />
-        </a>
+    <div className="partners-section">
+      <div className="scroller" ref={scrollerRef} data-speed="slow">
+        <div className="scroller-inner">
+          <a href="https://www.9dotsagency.com/" target="_blank" rel="noopener noreferrer" className="partner-item">
+            <img src={Dots1} alt="9Dots" loading="lazy" />
+          </a>
 
-        <a href="https://umt.edu.al/en/home/" target="_blank" rel="noopener noreferrer">
-          <motion.img
-            src={Dots2}
-            alt="Unimetropolitan"
-            variants={itemVariants}
-            loading="lazy"
-          />
-        </a>
+          <a href="https://umt.edu.al/en/home/" target="_blank" rel="noopener noreferrer" className="partner-item">
+            <img src={Dots2} alt="Unimetropolitan" loading="lazy" />
+          </a>
 
-        <a href="https://mygetex.com/" target="_blank" rel="noopener noreferrer">
-          <motion.img
-            src={Dots3}
-            alt="Getex"
-            variants={itemVariants}
-            loading="lazy"
-          />
-        </a>
+          <a href="https://mygetex.com/" target="_blank" rel="noopener noreferrer" className="partner-item">
+            <img src={Dots3} alt="Getex" loading="lazy" />
+          </a>
 
-        <a href="https://www.instagram.com/flexluxor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
-          <motion.img
-            src={Dots4}
-            alt="Flex"
-            variants={itemVariants}
-            loading="lazy"
-          />
-        </a>
+          <a href="https://www.instagram.com/flexluxor" target="_blank" rel="noopener noreferrer" className="partner-item">
+            <img src={Dots4} alt="Flex" loading="lazy" />
+          </a>
 
-        <a href="https://wbu.edu.al/" target="_blank" rel="noopener noreferrer">
-          <motion.img
-            src={Dots5}
-            alt="WBU"
-            variants={itemVariants}
-            loading="lazy"
-          />
-        </a>
+          <a href="https://wbu.edu.al/" target="_blank" rel="noopener noreferrer" className="partner-item">
+            <img src={Dots5} alt="WBU" loading="lazy" />
+          </a>
 
-        <a href="https://www.coaching-you.it/" target="_blank" rel="noopener noreferrer">
-          <motion.img
-            src={Dots6}
-            alt="Coaching"
-            variants={itemVariants}
-            loading="lazy"
-          />
-        </a>
-      </motion.div>
+          <a href="https://www.coaching-you-group.com/" target="_blank" rel="noopener noreferrer" className="partner-item">
+            <img src={Dots6} alt="Coaching" loading="lazy" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
