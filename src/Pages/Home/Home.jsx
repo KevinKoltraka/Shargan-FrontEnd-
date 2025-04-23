@@ -3,10 +3,10 @@ import SharganImage from "./../../images/shargan2.jpg";
 import Hero from "../../components/HeroSection/Hero";
 import Partner from "../../components/Partners/Partner";
 import AboutImage from "./../../images/mission.jpg";
-import Ecom from "./../../images/ecom.gif";
-import Business from "./../../images/Projections.gif";
-import Portfolio from "./../../images/portfolio.gif";
-import Happy from "./../../images/ourvision.jpg";
+import Ecom from "./../../images/students.jpg";
+import Business from "./../../images/business.jpg";
+import Portfolio from "./../../images/hr.jpg";
+import Happy from "./../../images/getexevent.png";
 import Card from "../Services/Cards/Card";
 import "./home.css";
 import { FiAward, FiBox } from "react-icons/fi";
@@ -19,7 +19,7 @@ const Home = () => {
         title="Your getway"
         description={`<span style="color:rgb(255, 255, 255);">to</span> study in Europe`}
         btnText="Start a conversation"
-        heroImg={SharganImage} 
+        heroImg={SharganImage}
         heroAlt="Shargan Consulting Image"
         staticImage={"./../../images/animationReplacement.jpg"} // New static image
         urlLink={"https://api.whatsapp.com/send?phone=355699305604"}
@@ -35,19 +35,16 @@ const Home = () => {
         ClassNameabout_zolaha_section={"about-zolaha-section"}
         AboutImg={AboutImage}
         AboutZolahaImage="about-zolaha-img"
-        CompanyName="Our Mission"
-        CompanyScene="Empowering Organizations with Tailored Consulting Solutions for Sustainable Growth and Talent Development."
-        CompanyDetails="To provide customized and innovative consulting solutions that help our clients improve performance, develop their human capacities and achieve long-term sustainability. We aim to be strategic partners in the transformation process of organizations, offering specialized expertise in human resource management, training, mentoring and recruitment, always adapting to the specific needs of each client."
-        Checklist1="Recruitment Marketing Services"
-        Checklist2="Talent Acquisition Solutions"
-        Checklist3="Employer Branding Agency"
-        Checklist4="Digital Recruitment Marketing"
-        Checklist5="HR Marketing Strategies"
-        Checklist6="Candidate Engagement Services"
-        AboutBtnText="Follow Us on Instagram"
+        CompanyName="Our Vision & Mission"
+        CompanyScene="We empower organizations with tailored, innovative, and sustainable consulting solutions to drive growth and talent development across Albania and beyond."
+        CompanyDetails="As a trusted partner, we deliver expertise in HR, recruitment, and organizational development—helping clients improve performance, navigate change, and achieve long-term success."
+        Checklist1="Recruitment Marketing"
+        Checklist2="Talent Acquisition"
+        Checklist3="Employer Branding"
+        Checklist4={null}
+        Checklist5={null}
+        Checklist6={null}
         FaIcon={<FiBox />}
-        AboutBtnTextClassName={"button-header btn-about-zolaha"}
-        urlAboutLink="https://www.instagram.com/shargan_consulting/"
       />
 
       <div className="home-our-services-section">
@@ -60,25 +57,25 @@ const Home = () => {
         <div className="home-our-services-cards">
           <Card
             image={Ecom}
-            altText="Human resources consultancy"
-            businessPara="We offer full HR support, including hiring, engagement, compensation, compliance, and performance management."
-            businessTitle="Human resources consultancy"
+            altText="Student Mobility Services"
+            businessTitle="Student Mobility Services"
+            businessPara="We assist international students with study opportunities in Albania, covering guidance, applications, visas, and local support."
             btText1="Learn More"
             btText2="Contact us"
           />
           <Card
             image={Portfolio}
-            altText="Financial consultancy"
-            businessTitle="Financial consultancy"
-            businessPara="We offer financial analysis, budgeting, forecasting, risk management, M&A guidance, and capital investment advice."
+            altText="HR and Talent Solutions"
+            businessTitle="HR and Talent Solutions"
+            businessPara="We support businesses in finding, hiring, and retaining talent through recruitment, training, and performance strategies."
             btText1="Learn More"
             btText2="Contact us"
           />
           <Card
             image={Business}
-            altText="IT consultancy"
-            businessTitle="IT consultancy"
-            businessPara="We offer IT strategy, tech assessment, cybersecurity, custom software, cloud migration, and project management."
+            altText="Strategic Business Consulting"
+            businessTitle="Strategic Business Consulting"
+            businessPara="We help companies grow with tailored business plans, market entry advice, and operational strategy development services."
             btText1="Learn More"
             btText2="Contact us"
           />
@@ -91,16 +88,16 @@ const Home = () => {
         }
         AboutImg={Happy}
         AboutZolahaImage="about-zolaha-img"
-        CompanyName="Our Vision"
-        CompanyScene="Empowering Growth with Integrity and Innovation Across Albania and Beyond"
-        CompanyDetails="To become the leading consulting company in Albania and the region, known for its professionalism, integrity and positive impact on the growth of organizations. We aspire to create an environment where businesses and individuals can reach their full potential through sustainable and innovative solutions that meet today's market challenges."
+        CompanyName="Shargan Consulting at GETEX Fair Education 2025 – Dubai "
+        CompanyScene="We are excited to announce that Shargan Consulting will be participating in the GETEX Fair Education 2025 in Dubai, one of the most prestigious international education events, taking place from April 30 to May 2, 2025! "
+        CompanyDetails=""
         FaIcon={<FiAward />}
-        Checklist1="Leading consulting company"
-        Checklist2="Professional business growth"
-        Checklist3="Innovative solutions"
-        Checklist4="Sustainable growth strategies"
-        Checklist5="Organizational development"
-        Checklist6="Albania business consulting"
+        Checklist1="International Education Expo Dubai"
+        Checklist2="Study Abroad Opportunities Albania"
+        Checklist3="Global Student Recruitment"
+        Checklist4={null}
+        Checklist5={null}
+        Checklist6={null}
         AboutBtnText="Contact us on LinkedIn"
         AboutBtnTextClassName={"button-header btn-about-zolaha"}
         urlAboutLink="https://www.linkedin.com/company/shargan-consulting-studio/"

@@ -15,8 +15,7 @@ const About = () => {
     <div id="About">
       <Hero
         title="Student Journey Albania"
-        description="Student Journey Albania is a concept that describes the journey and experience of international students who come to study in Albania with the help of Shargan Consulting representatives.
-This process includes all stages of the student experience, from the moment of application for a study program at an Albanian university to the completion of studies and post-graduate experiences."
+        description=""
         btnText="Contact Us for More Information"
         heroImg={uiDesign}
         heroAlt="Digital Success"

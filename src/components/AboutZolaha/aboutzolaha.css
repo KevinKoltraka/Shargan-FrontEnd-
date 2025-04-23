@@ -10,11 +10,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 3rem;
   padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: #0e4c71;
+  clip-path: ellipse(150% 100% at 50% 0%);
 }
+
+.about-zolaha-section > div:first-child {
+  flex: 0 0 40%;
+}
+
+.about-zolaha-section > div:last-child {
+  flex: 0 0 60%;
+}
+
 
 /* Left Section with Image */
 .left-about-zolaha-section {
@@ -25,7 +33,7 @@
 }
 
 .left-about-zolaha-section img {
-  max-width: 65%;
+  max-width: 90%;
   height: auto;
   border-radius: 5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -38,26 +46,27 @@
 
 /* Right Section with Content */
 .right-about-zolaha-section {
-  flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;     
   gap: 1.5rem;
+  text-align: left;       
 }
+
 
 /* Company Name */
 .about-company-name h3 {
-  font-size: 2.7rem;
+  font-size: 4rem;
   color: #ffffff;
-  margin: 0;
+  margin: 0 0 2rem 0;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-family: "Cambria";
 }
 
 /* Company Scene/Headline */
 .about-company-scene h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: "MyCustomFont";
   color: #ffffff;
   margin: 0.5rem 0;
@@ -67,7 +76,7 @@
 
 /* Company Details */
 .about-company-details p {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: 500;
   font-family: 'MyCustomFont';
   line-height: 1.6;
@@ -78,6 +87,7 @@
 /* Company Facilities */
 .company-facilities {
   display: flex;
+  flex-direction: column;
   gap: 10rem;
   margin-top: 1rem;
 }
@@ -89,16 +99,16 @@
 .checklist-company p {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #ffffff;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffb100;
 }
 
 /* Icon styling */
 .checklist-company p svg {
-  color: #ffffff;
-  font-size: 1.25rem;
+  color: #ffb100;
+  font-size: 2.2rem;
   flex-shrink: 0;
 }
 
@@ -155,9 +165,6 @@
 }
 
 @media (max-width: 480px) {
-  [class*="about-zolaha-section"] {
-    padding: 2rem 1rem;
-  }
 
   .left-about-zolaha-section img {
     max-width: 95%;

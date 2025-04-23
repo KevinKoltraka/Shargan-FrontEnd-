@@ -1,7 +1,14 @@
 .our-partners-homepage {
   width: 100%;
-  padding: 2rem;
-  background: linear-gradient(135deg, #072c45 0%, #0e4c71 25%, #1a6596 50%, #0e4c71 75%, #072c45 100%);
+  padding: 2rem 0;
+  background: linear-gradient(
+    135deg,
+    #072c45 0%,
+    #0e4c71 25%,
+    #1a6596 50%,
+    #0e4c71 75%,
+    #072c45 100%
+  );
 }
 
 .our-partners-homepage h2 {
@@ -21,6 +28,8 @@
 .home-our-services-section {
   width: 100%;
   padding: 7rem;
+  background: white;
+ 
 }
 
 .home-our-services {
@@ -33,25 +42,31 @@
 }
 
 .home-our-services h2 {
-  color: #000000;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 4rem;
+  color: #0e4c71;
+  font-family: "Cambria";
 }
 
 .home-more-services {
   width: auto;
   border: none;
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
+  margin: 1.2rem 0;
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  background-color: #ffb100;
+  color: #000000;
+  font-size: 1.5rem;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-shadow: none;
 }
 
 .home-more-services:hover {
-  background-color: rgb(157, 243, 145);
-  color: rgb(0, 0, 0);
-  transform: scale(1.05); /* Slight zoom on hover */
+  background-color: #0e4c71;
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+  box-shadow: none;
 }
 
 .home-our-services-cards {
@@ -109,7 +124,11 @@
     width: 100%;
     padding: 1rem;
   }
+  .our-partners-homepage {
+    padding: 1rem 0 1rem 0;
+  }
   .our-partners-homepage h2 {
+    font-size: 3rem;
     margin-top: 2rem;
   }
   .partners-section {

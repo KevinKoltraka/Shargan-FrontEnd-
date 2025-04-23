@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './card.css';
 import { Link } from 'react-router-dom';
-import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Card = ({
   image,
@@ -72,6 +73,22 @@ const Card = ({
       </div>
     </div>
   );
+};
+
+// Add PropTypes validation
+Card.propTypes = {
+  image: PropTypes.string.isRequired,
+  altText: PropTypes.string.isRequired,
+  businessLabel: PropTypes.string.isRequired,
+  businessTitle: PropTypes.string.isRequired,
+  businessPara: PropTypes.string.isRequired,
+  businessPara2: PropTypes.string,
+  businessPara3: PropTypes.string,
+  businessPara4: PropTypes.string,
+  businessPara5: PropTypes.string,
+  businessPara6: PropTypes.string,
+  btText1: PropTypes.string.isRequired,
+  btText2: PropTypes.string.isRequired
 };
 
 export default Card;
