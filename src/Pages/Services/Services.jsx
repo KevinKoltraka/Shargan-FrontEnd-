@@ -1,13 +1,13 @@
 import './services.css';
 import Card from './Cards/Card'
-import OurServices from './../../images/Logo2.svg'
+import OurServices from './../../images/Logo2.png'
 import Ecom from './../../images/hr2.jpg';
-import Portfolio from './../../images/portfolio.gif'
+import Portfolio from './../../images/finance.jpg'
 import Hero from '../../components/HeroSection/Hero';
 import ServiceImg from './../../images/service.jpg'
-import Business from './../../images/Projections.gif'
-import SEO from './../../images/socialmedia.png'
-import SocialMedia from './../../images/sales.png'
+import Business from './../../images/IT.jpg'
+import SEO from './../../images/socialmedia.jpg'
+import SocialMedia from './../../images/sales.jpg'
 
 
 const Services = () => {
