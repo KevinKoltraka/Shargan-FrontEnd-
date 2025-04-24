@@ -13,8 +13,8 @@ const About = () => {
   return (
     <div id="About">
       <Hero
-        title="Student Journey Albania"
-        description=""
+        title="Student Journey"
+        description={`<span style="color:rgb(255, 255, 255);"></span> Albania`}
         btnText="Get in Touch"
         heroImg={uiDesign}
         heroAlt="Digital Success"
@@ -23,7 +23,7 @@ const About = () => {
         }
         imgClass="hero-img-custom-style"
         style={{
-          height: "100vh",
+          height: "90vh",
           width: "100%",
           backgroundImage: `url(${uiDesign})`,
           backgroundSize: "cover",

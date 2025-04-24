@@ -19,11 +19,13 @@ const Hero = ({
           {subtitle && <h3 className="hero-subtitle">{subtitle}</h3>}
           <p dangerouslySetInnerHTML={{ __html: description }}></p>
 
-          <Link to={urlLink} target="_blank" className="send-message">
-            <button className="button-header">
-              <FaWhatsapp className="whatsapp-icon" /> {btnText}
-            </button>
-          </Link>
+          {btnText && (
+            <Link to={urlLink} target="_blank" className="send-message">
+              <button className="button-header">
+                <FaWhatsapp className="whatsapp-icon" /> {btnText}
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

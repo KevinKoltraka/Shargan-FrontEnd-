@@ -1,47 +1,32 @@
 @font-face {
-  font-family: "MyCustomFont"; /* Choose any name */
-  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype"); /* use correct path & formats */
+  font-family: "MyCustomFont";
+  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 .cards-box {
-  background:linear-gradient(
+  background: linear-gradient(
     135deg,
     #072c45 0%,
     #0e4c71 25%,
     #1a6596 50%,
     #0e4c71 75%,
-    #072c45 100%);
-  width: 35rem;
-  padding: 10px;
+    #072c45 100%
+  );
+  width: 60rem;
+  max-width: 100%;
+  padding: 1.5rem;
   border-radius: 2rem;
-  -webkit-box-shadow: 2px 2px 5px 0px rgb(0, 0, 0);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem 4rem;
 }
 
 .cards-box:hover {
-  transform: scale(1.05);
-  -webkit-box-shadow: 5px 5px 15px rgb(0, 0, 0);
-  -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 5px 12px 20px rgba(0, 0, 0, 0.4);
 }
-
-.view-more {
-  color: #007bff;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: large;
-  margin-bottom: 2rem;
-  font-style: italic;
-  font-family: 'Roboto', sans-serif;
-}
-
-.view-more:hover {
-  text-decoration: underline;
-}
-
 
 .cards-inside {
   color: #f5f0f0;
@@ -49,135 +34,235 @@
   flex-direction: column;
 }
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .card-image-box {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .cards-inside img {
   width: 100%;
   height: auto;
-  border-radius: 2rem;
-  margin: 0rem 1rem 2rem 1rem;
+  border-radius: 1.5rem;
+  transition: transform 0.5s ease;
+  display: block;
 }
 
-.card-title {
-  color: #ffffff;
-  font-size: 2.2rem;
-  font-family: "MyCustomFont";
-}
-
-.card-para {
-  color: #ffffff;
-  font-size: 2rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  font-family: "MyCustomFont";
+.cards-inside img:hover {
+  transform: scale(1.03);
 }
 
 .card-label {
   font-family: "Kaisei Opti", serif;
   color: rgb(122, 121, 121);
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.card-title {
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "MyCustomFont";
+  margin: 0.5rem 0 1rem 0;
+  line-height: 1.2;
+  position: relative;
+}
+
+.card-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ffb100;
+  margin-top: 0.8rem;
+}
+
+.card-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-para {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: "MyCustomFont";
+  line-height: 1.5;
+  margin: 0;
+}
+
+.view-more {
+  color: #ffb100;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem 0;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.view-more:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .button-box {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 
-.primary-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  border: 1px solid gray;
-  border-radius: 10px;
-  width: auto;
-  height: 35px;
-  color: #0e4c71;
-  background-color: #ffb100;
-  box-shadow: none;
-  border-radius: 1rem;
-  font-size: 1.5rem;
-}
-
-
+.primary-button,
 .secondary-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  border: 1px solid gray;
-  border-radius: 10px;
-  width: auto;
-  height: 35px;
-  color: #0e4c71;
-  background-color: #ffffff;
-  box-shadow: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
   font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 120px;
+  height: auto;
+  border: none;
+  flex-grow: 1;
 }
 
-.secondary-button i {
-  margin-left: 8px;
-  transform: scale(1.05);
-}
-.primary-button:hover {
+.primary-button {
+  color: #0e4c71;
   background-color: #ffb100;
-  color: #0e4c71;
-  border: 1px solid gray;
-  box-shadow: none;
-  cursor: default;
-  transform: none;
-  scale: 1;
-  transition: none;
-  animation: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.secondary-button:hover {
-  background-color: #ffffff;
+.secondary-button {
   color: #0e4c71;
-  border: 1px solid gray;
-  box-shadow: none;
-  cursor: default;
-  transform: none;
-  scale: 1;
-  transition: none;
-  animation: none;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-icon {
+  margin-left: 8px;
+  font-size: 1.6rem;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.primary-button:active,
+.secondary-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 a {
-  text-decoration: none; /* Remove underline from the link */
+  text-decoration: none;
+  flex-grow: 1;
 }
-/* Responsive navbar For Tablet */
 
-@media (max-width: 900px) {
+/* Responsive styling */
+@media (max-width: 992px) {
+  .cards-box {
+    width: 32rem;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+  }
+  
+  .card-para {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-box {
+    width: 28rem;
+    padding: 1.2rem;
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-para {
+    font-size: 1.5rem;
+  }
+  
+  .button-box {
+    flex-direction: row;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    font-size: 1.3rem;
+    padding: 0.7rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
   .cards-box {
     width: 100%;
+    max-width: 24rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
   }
-
+  
+  .card-image-box {
+    margin-bottom: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.6rem;
+  }
+  
+  .card-para {
+    font-size: 1.3rem;
+  }
+  
   .button-box {
-    display: flex;
-    margin-top: 2rem;
+    flex-direction: column;
+    gap: 0.8rem;
   }
-
-  .primary-button {
-    padding: 11px;
-    font-size: 1.2rem;
-  }
-
+  
+  .primary-button,
   .secondary-button {
-    padding: 12px;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .view-more {
     font-size: 1rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .cards-box {
-    width: 90%;
-    margin-bottom: 10px;
+    max-width: 100%;
+    padding: 0.8rem;
   }
 }

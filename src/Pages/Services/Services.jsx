@@ -4,118 +4,101 @@ import OurServices from './../../images/Logo2.png'
 import Ecom from './../../images/hr2.jpg';
 import Portfolio from './../../images/finance.jpg'
 import Hero from '../../components/HeroSection/Hero';
-import ServiceImg from './../../images/service.jpg'
+import ServiceImg from './../../images/pexels-ingo-188035.jpg'
 import Business from './../../images/IT.jpg'
 import SEO from './../../images/socialmedia.jpg'
 import SocialMedia from './../../images/sales.jpg'
 
 
 const Services = () => {
-  
   return (
     <>
       <Hero
-      title="Unlocking Potential"
-      description="through Strategic Solutions"
-      btnText="Contact Us or Scroll Down for More Information"
-      heroImg={ServiceImg}
+        title="Unlocking Potential"
+        description="through Strategic Solutions"
+        heroImg={ServiceImg}
         heroAlt="Digital Success"
-        urlLink={'https://api.whatsapp.com/send?phone=918736082960&text=Hiii%20!!%20%F0%9F%99%83'}
-
-      
+        btnText={null}
+        style={{
+          height: "70vh",
+          width: "100%",
+          backgroundImage: `url(${ServiceImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          overflow: "hidden",
+        }}
       />
       <div className='our-services'>
-      <h2>Our Services</h2>
+        <h2>Our Services</h2>
       </div>
-    
 
       <div className="how-we-do-cards">
-
-      <Card
+        {/* Each Card is a separate instance with its own state */}
+        <Card
+          key="general-services" // Adding unique keys for React
           image={OurServices}
-          businessPara="Human resources, financial, IT, marketing, and sales consulting empower businesses through expert guidance."
-          businessPara2="HR consulting enhances talent acquisition, employee engagement, and compliance."
-          businessPara3="Financial consulting supports budgeting, risk management, and growth strategies."
-          businessPara4="IT consulting drives digital transformation with cybersecurity, software development, and cloud solutions."
-          businessPara5="Marketing consulting boosts visibility through strategy, digital campaigns, and branding, while sales consulting refines strategies to maximize revenue."
-          businessPara6="Together, these services help businesses thrive in competitive markets."
+          altText="Our Services Overview"
+          businessTitle="Business Consulting"
+          businessPara="Expert consulting in HR, finance, IT, marketing, and sales to drive innovation, growth, compliance, and market competitiveness."
           btText1="Learn More"
           btText2="Contact us"
         />
 
-
         <Card
+          key="hr-services" // Adding unique keys for React
           image={Ecom}
-          businessPara="• Talent acquisition: Helping companies with recruitment strategies, candidate screening and hiring processes."
-          businessPara2="• Employee Engagement: Advising on strategies to increase employee morale, productivity and retention."
-          businessPara3="• Compensation and benefits: Analyzing and optimizing compensation packages and benefits programs."
-          businessPara4="• Compliance with human resources: Ensuring compliance with labor laws and regulations."
-          businessPara5="• Performance Management: Development and improvement of performance evaluation systems."
-          businessPara6="• Organizational Development: Help with organizational restructuring and development."
+          altText="HR Services"
           businessTitle="Consulting for human resources"
+          businessPara="HR consulting to enhance recruitment, engagement, compliance, and development through strategic, people-focused business solutions."
           btText1="Learn More"
           btText2="Contact us"
         />
 
         <Card
+          key="financial-services" // Adding unique keys for React
           image={Portfolio}
-          businessPara="• Financial analysis: Analyzing financial statements and data to provide insights and recommendations."
-          businessPara2="• Budgeting and forecasting: Assists with budget creation, financial forecasting and cost management."
-          businessPara3="• Financial Planning: Development of financial strategies and long-term financial plans."
-          businessPara4="• Risk management: Identification and mitigation of financial risks."
-          businessPara5="• Mergers and acquisitions: Providing guidance on mergers, acquisitions and due diligence."
-          businessPara6="• Capital Investments: Advice on capital allocation and investment decisions."
+          altText="Financial Services"
           businessTitle="Financial consultancy"
+          businessPara="Financial consulting for budgeting, analysis, planning, risk, investments, and growth strategies tailored to business objectives."
           btText1="Learn More"
           btText2="Contact us"
         />
+      </div>
 
-        </div>
-      
       <div className="how-we-do-cards">
-
-      <Card
+        <Card
+          key="it-services" // Adding unique keys for React
           image={Business}
-          businessPara="• IT Strategy: Developing IT strategies in line with business goals"
-          businessPara2="• Technology Assessment: Assess existing IT infrastructure and recommend improvements."
-          businessPara3="• Cyber ​​security: Assessment and improvement of cyber security measures."
-          businessPara4="• Software Development: Help with custom software development projects."
-          businessPara5="• Cloud Computing: Consulting on cloud migration and management."
-          businessPara6="• IT Project Management: Management and supervision of IT projects."
+          altText="IT Services"
           businessTitle="IT Consulting"
+          businessPara="IT consulting to align tech with goals through strategy, cybersecurity, software, cloud services, and project management."
           btText1="Learn More"
           btText2="Contact us"
         />
 
         <Card
+          key="marketing-services" // Adding unique keys for React
           image={SEO}
-          businessPara="• Marketing strategy: Development of comprehensive marketing plans and strategies."
-          businessPara2="• Market research: Conduct market research to understand customer needs and market trends."
-          businessPara3="• Digital Marketing: Creating and implementing online marketing campaigns."
-          businessPara4="• Brand development: Building and managing brand identity."
-          businessPara5="• Content Marketing: Developing content strategies and creating engaging content."
-          businessPara6="• Social media marketing: Using social media for brand promotion."
+          altText="Marketing Services"
           businessTitle="Marketing consultancy"
+          businessPara="Marketing consulting that delivers brand growth, digital campaigns, strategy, research, content creation, and social media success."
           btText1="Learn More"
           btText2="Contact us"
         />
 
         <Card
+          key="sales-services" // Adding unique keys for React
           image={SocialMedia}
-          businessPara="• Sales strategy: Development of sales strategies and tactics."
-          businessPara2="• Sales Training: Providing sales teams with training and coaching."
-          businessPara3="• Sales process optimization: Improving sales processes for efficiency."
-          businessPara4="• Customer Relationship Management (CRM): Implementation and optimization of CRM systems."
-          businessPara5="• Sales performance measurement: Development of key performance indicators (KPI) and sales metrics."
-          businessPara6="• Sales team management: Helps in team building and performance management."
+          altText="Sales Services"
           businessTitle="Sales consultancy"
+          businessPara="Sales consulting to improve strategy, training, CRM, metrics, and team performance for consistent and scalable revenue growth."
           btText1="Learn More"
           btText2="Contact us"
         />
-        </div>
-     
-        </>
+      </div>
+    </>
   );
 };
-     
+
 export default Services;
