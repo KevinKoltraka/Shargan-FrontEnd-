@@ -8,30 +8,25 @@ const Hero = ({
   subtitle,
   description,
   btnText,
-
   urlLink,
-
+  style, // Accept the style prop
 }) => {
   return (
-    <>
-      <div className="hero-section">
+    <div className="hero-section" style={style}>
       <div className="left-hero-section">
-          <div className="left-hero-section-content">
-            <h2>{title}</h2>
-            {/* Render subtitle if provided */}
-            {subtitle && <h3 className="hero-subtitle">{subtitle}</h3>}
-            <p dangerouslySetInnerHTML={{ __html: description }}></p>
+        <div className="left-hero-section-content">
+          <h2>{title}</h2>
+          {subtitle && <h3 className="hero-subtitle">{subtitle}</h3>}
+          <p dangerouslySetInnerHTML={{ __html: description }}></p>
 
-            <Link to={urlLink} target="_blank" className="send-message">
-              <button className="button-header">
-                <FaWhatsapp className="whatsapp-icon" /> {btnText}
-              </button>
-            </Link>
-          </div>
+          <Link to={urlLink} target="_blank" className="send-message">
+            <button className="button-header">
+              <FaWhatsapp className="whatsapp-icon" /> {btnText}
+            </button>
+          </Link>
         </div>
-        
       </div>
-    </>
+    </div>
   );
 };
 
@@ -40,12 +35,8 @@ Hero.propTypes = {
   subtitle: PropTypes.string,
   description: PropTypes.string.isRequired,
   btnText: PropTypes.string.isRequired,
-  heroImg: PropTypes.string.isRequired,
-  hideHeroImg: PropTypes.bool,
-  heroAlt: PropTypes.string.isRequired,
   urlLink: PropTypes.string.isRequired,
-  newImage: PropTypes.string,
-  style: PropTypes.object, // Keep the style prop flexible
+  style: PropTypes.object, // Define style prop explicitly
 };
 
 export default Hero;

@@ -1,13 +1,12 @@
 import Hero from "../../components/HeroSection/Hero";
 import "./about.css";
 import uiDesign from "./../../images/UI-Design.jpg";
-import OfficeTrans from "./../../images/aigenerated.jpg";
-import StudentVisa from "./../../images/studentvisa.jpg";
-import TransferStudent from "./../../images/transferstudent.png";
+import OfficeTrans from "./../../images/info&research.jpg";
+import StudentVisa from "./../../images/application.jpg";
+import TransferStudent from "./../../images/transfer.png";
 import StudentExperience from "./../../images/studentexperience.png";
 import AfterGraduate from "./../../images/AfterGraduation.png";
-import Mission from "./../../images/ourmission.jpg";
-import Vision from "./../../images/Vision.png";
+import Mission from "./../../images/ourmission.png";
 import AboutZolaha from "../../components/AboutZolaha/AboutZolaha";
 import { FiCheck } from "react-icons/fi";
 const About = () => {
@@ -16,7 +15,7 @@ const About = () => {
       <Hero
         title="Student Journey Albania"
         description=""
-        btnText="Contact Us for More Information"
+        btnText="Get in Touch"
         heroImg={uiDesign}
         heroAlt="Digital Success"
         urlLink={
@@ -24,19 +23,16 @@ const About = () => {
         }
         imgClass="hero-img-custom-style"
         style={{
-          width:
-            (window.innerWidth >= 1200 && window.innerWidth <= 1440) ||
-              window.innerWidth < 1999
-              ? "95%"
-              : "auto",
-          height: "auto",
-          marginLeft:
-            window.innerWidth >= 1200 && window.innerWidth <= 1440
-              ? "-70px"
-              : "0",
-          display: "block",
+          height: "100vh",
+          width: "100%",
+          backgroundImage: `url(${uiDesign})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          overflow: "hidden",
         }}
       />
+
       <AboutZolaha
         ClassNameabout_zolaha_section={"about-zolaha-section"}
         AboutImg={OfficeTrans}
@@ -66,9 +62,6 @@ const About = () => {
         Checklist1="University application process"
         Checklist2="Student admission requirement"
         Checklist3="Required documents for admission"
-        Checklist4="Student visa process"
-        Checklist5="Applying to university abroad"
-        Checklist6="International student admission"
       />
 
       <AboutZolaha
@@ -83,9 +76,6 @@ const About = () => {
         Checklist1="Albania relocation guide"
         Checklist2="Moving to Albania documentation"
         Checklist3="Albania residency requirements"
-        Checklist4="Expat life in Albania"
-        Checklist5="Albania immigration process"
-        Checklist6="Living in Albania practical tips"
       />
 
       <AboutZolaha
@@ -100,9 +90,6 @@ const About = () => {
         Checklist1="Studying in Albania experience"
         Checklist2="Albanian university life"
         Checklist3="Albanian cultural integration"
-        Checklist4="Student support in Albania"
-        Checklist5="Albania academic environment"
-        Checklist6="Social life for international students in Albania"
       />
 
       <AboutZolaha
@@ -117,9 +104,6 @@ const About = () => {
         Checklist1="Post-graduation options in Albania"
         Checklist2="Career opportunities for graduates in Albania"
         Checklist3="Advanced studies in Albania"
-        Checklist4="Working in Albania after graduation"
-        Checklist5="Albania graduate job market"
-        Checklist6="Alumni career paths in Albania"
       />
 
       <AboutZolaha
@@ -129,16 +113,6 @@ const About = () => {
         CompanyName="The mission of Student Journey Albania"
         CompanyDetails={
           "To facilitate the academic and cultural journey of international students to Albania, offering full support at every step of their educational path. We aim to promote Albania as an attractive destination for higher education, providing reliable information, personalized services and a rich experience that helps students get the most out of their studies and life in Albania."
-        }
-      />
-
-      <AboutZolaha
-        ClassNameabout_zolaha_section={"about-zolaha-section"}
-        AboutImg={Vision}
-        AboutZolahaImage="about-zolaha-img"
-        CompanyName="The vision of Student Journey Albania"
-        CompanyDetails={
-          "To become the main platform for attracting international students to Albania, creating an experience of high standards that reinforces the image of Albania as an important center of education and culture in the region. We aspire that every student feels supported and welcomed, developing a global community closely connected to Albania and its educational opportunities."
         }
       />
     </div>

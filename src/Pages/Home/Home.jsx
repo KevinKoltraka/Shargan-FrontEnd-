@@ -1,5 +1,5 @@
 import AboutZolaha from "../../components/AboutZolaha/AboutZolaha";
-import SharganImage from "./../../images/shargan2.jpg";
+import SharganImage from "/pexels-ingo-188035.jpg";
 import Hero from "../../components/HeroSection/Hero";
 import Partner from "../../components/Partners/Partner";
 import AboutImage from "./../../images/mission.jpg";
@@ -21,9 +21,14 @@ const Home = () => {
         btnText="Start a conversation"
         heroImg={SharganImage}
         heroAlt="Shargan Consulting Image"
-        staticImage={"./../../images/animationReplacement.jpg"} // New static image
         urlLink={"https://api.whatsapp.com/send?phone=355699305604"}
         hideHeroImg={true}
+        style={{
+          backgroundImage: `url(${SharganImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       />
 
       <div className="our-partners-homepage">

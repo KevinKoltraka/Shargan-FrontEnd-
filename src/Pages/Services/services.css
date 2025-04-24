@@ -9,6 +9,12 @@
     justify-content: center;
   }
 
+  h2 {
+    margin-top: 3rem;
+    color: #0e4c71;
+    font-family: "Cambria";
+  }
+
   
 /* Responsive navbar For Tablet */
 

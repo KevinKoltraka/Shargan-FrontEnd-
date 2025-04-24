@@ -1,7 +1,7 @@
 import './services.css';
 import Card from './Cards/Card'
-import OurServices from './../../images/OUR-SERVICES.png'
-import Ecom from './../../images/ecom.gif';
+import OurServices from './../../images/Logo2.svg'
+import Ecom from './../../images/hr2.jpg';
 import Portfolio from './../../images/portfolio.gif'
 import Hero from '../../components/HeroSection/Hero';
 import ServiceImg from './../../images/service.jpg'
