@@ -1,7 +1,9 @@
 /* About Zolaha Section Styles */
 @font-face {
-  font-family: "MyCustomFont"; /* Choose any name */
-  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype"); /* use correct path & formats */
+  font-family: "MyCustomFont";
+  /* Choose any name */
+  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype");
+  /* use correct path & formats */
   font-weight: normal;
   font-style: normal;
 }
@@ -48,22 +50,28 @@
 
 .announcement-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* default: 2 in a row */
+  grid-template-columns: repeat(2, 1fr);
+  /* default: 2 in a row */
   gap: 2rem;
   margin-bottom: 2rem;
-  justify-content: center; /* centers the grid itself if not full-width */
+  justify-content: center;
+  /* centers the grid itself if not full-width */
 }
 
 /* When ONLY 1 child, center the item but keep same layout */
 .announcement-cards:has(:only-child) {
-  grid-template-columns: repeat(2, 1fr); /* Keep same layout as normal */
+  grid-template-columns: repeat(2, 1fr);
+  /* Keep same layout as normal */
 }
 
 /* Center the only item manually */
-.announcement-cards:has(:only-child) > *:only-child {
-  grid-column: 1 / -1;           /* span across both columns */
-  justify-self: center;         /* center it */
-  max-width: 500px;             /* limit width */
+.announcement-cards:has(:only-child)>*:only-child {
+  grid-column: 1 / -1;
+  /* span across both columns */
+  justify-self: center;
+  /* center it */
+  max-width: 500px;
+  /* limit width */
   width: 100%;
 }
 
@@ -77,7 +85,8 @@
   display: flex;
   flex-direction: column;
   border: 1px solid #e0e0e0;
-  height: 550px; /* Fixed height for all cards */
+  height: 550px;
+  /* Fixed height for all cards */
 }
 
 .card:hover {
@@ -112,7 +121,8 @@
 
 /* Media container with fixed dimensions */
 .media-container {
-  height: 250px; /* Fixed height for media */
+  height: 250px;
+  /* Fixed height for media */
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -124,17 +134,23 @@
 
 /* Media content styling */
 .media {
-  width: 100%; /* Fill container width */
-  height: 250px; /* Fixed height for all media */
-  object-fit: contain; /* Maintains aspect ratio */
+  width: 100%;
+  /* Fill container width */
+  height: 250px;
+  /* Fixed height for all media */
+  object-fit: contain;
+  /* Maintains aspect ratio */
   display: block;
-  max-width: 320px; /* Maximum width for media */
+  max-width: 320px;
+  /* Maximum width for media */
 }
 
 .video-wrapper {
   position: relative;
-  width: 320px; /* Fixed width for video container */
-  height: 250px; /* Fixed height for video container */
+  width: 320px;
+  /* Fixed width for video container */
+  height: 250px;
+  /* Fixed height for video container */
   overflow: hidden;
 }
 
@@ -144,6 +160,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 2rem;
 }
 
 /* Ensure videos maintain the fixed dimensions */
@@ -201,6 +218,7 @@ video.media::-webkit-media-controls {
   height: 250px;
   background-color: #000;
   overflow: hidden;
+  border-radius: 2rem;
 }
 
 /* Video element */
@@ -412,8 +430,13 @@ video.media::-webkit-media-controls {
 }
 
 @keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 /* Show loading spinner when video is loading */
@@ -421,32 +444,205 @@ video.media::-webkit-media-controls {
   display: block;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Media Queries for Responsiveness */
+
+/* Large tablets and small desktops */
+@media screen and (max-width: 1024px) {
+  .announcement-cards {
+    gap: 1.5rem;
+  }
+  
+  .card {
+    height: 500px;
+  }
+}
+
+/* Medium tablets */
+@media screen and (max-width: 900px) {
+  .announcement-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .card h2 {
+    font-size: 1.8rem;
+  }
+  
+  .card p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small tablets and large phones */
+@media screen and (max-width: 768px) {
   .announcement-cards {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-
-  .filters {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .filter-btn {
+  
+  .announcement-cards > * {
+    max-width: 500px;
+    margin: 0 auto;
     width: 100%;
-    max-width: 250px;
+  }
+  
+  .card {
+    height: auto;
+    min-height: 480px;
+  }
+  
+  .filters {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    justify-content: flex-start;
+  }
+  
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 }
 
-/* Adding some highlighting for contact information */
-.card p:nth-child(3),
-.card p:nth-child(4),
-.card p:nth-child(5) {
-  color: #0e4c71;
+/* Specific fixes for pagination on smaller screens */
+@media screen and (max-width: 600px) {
+  .pagination {
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  
+  .page-btn {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.5rem;
+  }
 }
 
-/* Adding some accent for details with emojis */
-.card p:has(span[role="img"]) {
-  font-weight: 500;
-  color: #0e4c71;
+/* Mobile phones */
+@media screen and (max-width: 500px) {
+  .announcements-section {
+    padding: 4rem 0.5rem;
+  }
+
+  .announcement-cards:has(:only-child) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    min-height: 420px;
+  }
+  
+  .card h2 {
+    font-size: 1.6rem;
+    padding: 0.75rem;
+  }
+  
+  .card p {
+    font-size: 1.3rem;
+    padding: 0 0.75rem;
+  }
+  
+  .media-container {
+    height: 200px;
+  }
+  
+  .media {
+    height: 200px;
+    max-width: 280px;
+  }
+  
+  .video-wrapper {
+    width: 280px;
+    height: 200px;
+  }
+  
+  .custom-video-container {
+    max-width: 280px;
+    height: 200px;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .page-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Small mobile phones */
+@media screen and (max-width: 360px) {
+  .card h2 {
+    font-size: 1.4rem;
+  }
+  
+  .card p {
+    font-size: 1.2rem;
+  }
+  
+  .media-container {
+    height: 180px;
+  }
+  
+  .media {
+    height: 180px;
+    max-width: 240px;
+  }
+  
+  .video-wrapper {
+    width: 240px;
+    height: 180px;
+  }
+  
+  .custom-video-container {
+    max-width: 240px;
+    height: 180px;
+  }
+  
+  .video-controls {
+    padding: 4px;
+    gap: 4px;
+  }
+  
+  .play-pause-btn, .fullscreen-btn {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .volume-container {
+    width: 70px;
+  }
+
+   /* Further pagination adjustments */
+   .page-btn {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* For landscape orientation on mobile */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .announcement-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card {
+    height: auto;
+    min-height: 360px;
+  }
+  
+  .media-container {
+    height: 160px;
+  }
+  
+  .media, .video-wrapper, .custom-video-container {
+    height: 160px;
+  }
 }
