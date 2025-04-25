@@ -79,7 +79,7 @@ const Home = () => {
           <Card
             image={Business}
             altText="Strategic Business Consulting"
-            businessTitle="Strategic Business Consulting"
+            businessTitle="Business Consulting"
             businessPara="We help companies grow with tailored business plans, market entry advice, and operational strategy development services."
             btText1="Learn More"
             btText2="Contact us"

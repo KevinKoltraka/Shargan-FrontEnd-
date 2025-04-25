@@ -14,8 +14,7 @@
     #0e4c71 75%,
     #072c45 100%
   );
-  width: 60rem;
-  max-width: 100%;
+  width: 55rem;
   padding: 1.5rem;
   border-radius: 2rem;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
@@ -51,7 +50,7 @@
 
 .cards-inside img {
   width: 100%;
-  height: auto;
+  height: 220px;
   border-radius: 1.5rem;
   transition: transform 0.5s ease;
   display: block;
@@ -81,7 +80,7 @@
 }
 
 .card-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 50px;
   height: 3px;
@@ -97,7 +96,7 @@
 
 .card-para {
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-family: "MyCustomFont";
   line-height: 1.5;
   margin: 0;
@@ -110,7 +109,7 @@
   font-size: 1.2rem;
   margin: 0.5rem 0 1rem 0;
   font-style: italic;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   align-self: flex-start;
   transition: color 0.2s ease;
   display: inline-block;
@@ -124,8 +123,9 @@
 .button-box {
   display: flex;
   justify-content: space-between;
+  align-self: flex-start;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
@@ -166,10 +166,20 @@
   font-size: 1.6rem;
 }
 
+.primary-button:hover {
+  color: #0e4c71;
+  background-color: #ffb100;
+}
+
+.secondary-button:hover {
+  color: #0e4c71;
+  background-color: #ffffff;
+}
+
 .primary-button:hover,
 .secondary-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
 }
 
 .primary-button:active,
@@ -188,11 +198,11 @@ a {
   .cards-box {
     width: 32rem;
   }
-  
+
   .card-title {
     font-size: 2rem;
   }
-  
+
   .card-para {
     font-size: 1.6rem;
   }
@@ -203,19 +213,19 @@ a {
     width: 28rem;
     padding: 1.2rem;
   }
-  
+
   .card-title {
     font-size: 1.8rem;
   }
-  
+
   .card-para {
     font-size: 1.5rem;
   }
-  
+
   .button-box {
     flex-direction: row;
   }
-  
+
   .primary-button,
   .secondary-button {
     font-size: 1.3rem;
@@ -230,31 +240,31 @@ a {
     padding: 1rem;
     border-radius: 1.5rem;
   }
-  
+
   .card-image-box {
     margin-bottom: 1rem;
   }
-  
+
   .card-title {
     font-size: 1.6rem;
   }
-  
+
   .card-para {
     font-size: 1.3rem;
   }
-  
+
   .button-box {
     flex-direction: column;
     gap: 0.8rem;
   }
-  
+
   .primary-button,
   .secondary-button {
     width: 100%;
     font-size: 1.2rem;
     padding: 0.6rem 0.8rem;
   }
-  
+
   .view-more {
     font-size: 1rem;
   }

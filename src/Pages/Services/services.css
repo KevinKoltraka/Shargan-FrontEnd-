@@ -4,7 +4,7 @@
 }
   .how-we-do-cards{
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     padding: 4rem;
     justify-content: center;
   }

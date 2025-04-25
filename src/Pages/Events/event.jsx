@@ -1,7 +1,6 @@
-import React from "react";
 import Hero from "../../components/HeroSection/Hero";
 import "./event.css";
-import uiDesign from "./../../images/3.jpeg";
+import uiDesign from "./../../images/event.jpg";
 import OfficeTrans from "./../../images/event1.heic";
 import StudentVisa from "./../../images/event2.jpg";
 import TransferStudent from "./../../images/event3.jpg";
@@ -23,19 +22,15 @@ const Events = () => {
         heroImg={uiDesign}
         heroAlt="Digital Success"
         imgClass="hero-img-custom-style"
-        style={{
-          width:
-            (window.innerWidth >= 1200 && window.innerWidth <= 1440) ||
-            window.innerWidth < 1999
-              ? "70%"
-              : "auto",
-          height: "auto",
-          marginLeft:
-            window.innerWidth >= 1200 && window.innerWidth <= 1440
-              ? "-70px"
-              : "0",
-          display: "block",
-        }}
+         style={{
+                  height: "90vh",
+                  width: "100%",
+                  backgroundImage: `url(${uiDesign})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  overflow: "hidden",
+                }}
       />
       <AboutZolaha
         ClassNameabout_zolaha_section={"about-zolaha-section"}

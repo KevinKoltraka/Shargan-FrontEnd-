@@ -1,14 +1,13 @@
-import './services.css';
-import Card from './Cards/Card'
-import OurServices from './../../images/Logo2.png'
-import Ecom from './../../images/hr2.jpg';
-import Portfolio from './../../images/finance.jpg'
-import Hero from '../../components/HeroSection/Hero';
-import ServiceImg from './../../images/pexels-ingo-188035.jpg'
-import Business from './../../images/IT.jpg'
-import SEO from './../../images/socialmedia.jpg'
-import SocialMedia from './../../images/sales.jpg'
-
+import "./services.css";
+import Card from "./Cards/Card";
+import OurServices from "./../../images/Students2.jpg";
+import Ecom from "./../../images/hr2.jpg";
+import Portfolio from "./../../images/finance.jpg";
+import Hero from "../../components/HeroSection/Hero";
+import ServiceImg from "./../../images/services.png";
+import Business from "./../../images/IT.jpeg";
+import SEO from "./../../images/socialmedia.jpg";
+import SocialMedia from "./../../images/sales.jpg";
 
 const Services = () => {
   return (
@@ -20,7 +19,7 @@ const Services = () => {
         heroAlt="Digital Success"
         btnText={null}
         style={{
-          height: "70vh",
+          height: "90vh",
           width: "100%",
           backgroundImage: `url(${ServiceImg})`,
           backgroundSize: "cover",
@@ -29,7 +28,7 @@ const Services = () => {
           overflow: "hidden",
         }}
       />
-      <div className='our-services'>
+      <div className="our-services">
         <h2>Our Services</h2>
       </div>
 
@@ -39,8 +38,8 @@ const Services = () => {
           key="general-services" // Adding unique keys for React
           image={OurServices}
           altText="Our Services Overview"
-          businessTitle="Business Consulting"
-          businessPara="Expert consulting in HR, finance, IT, marketing, and sales to drive innovation, growth, compliance, and market competitiveness."
+          businessTitle="Student Mobility Services"
+          businessPara="Helping students study in Albania with full local support."
           btText1="Learn More"
           btText2="Contact us"
         />
@@ -49,8 +48,8 @@ const Services = () => {
           key="hr-services" // Adding unique keys for React
           image={Ecom}
           altText="HR Services"
-          businessTitle="Consulting for human resources"
-          businessPara="HR consulting to enhance recruitment, engagement, compliance, and development through strategic, people-focused business solutions."
+          businessTitle="Consulting for HR"
+          businessPara="Empower people with strategic and compliant HR guidance."
           btText1="Learn More"
           btText2="Contact us"
         />
@@ -60,7 +59,7 @@ const Services = () => {
           image={Portfolio}
           altText="Financial Services"
           businessTitle="Financial consultancy"
-          businessPara="Financial consulting for budgeting, analysis, planning, risk, investments, and growth strategies tailored to business objectives."
+          businessPara="Achieve stability with smart and tailored financial plans."
           btText1="Learn More"
           btText2="Contact us"
         />
@@ -72,7 +71,7 @@ const Services = () => {
           image={Business}
           altText="IT Services"
           businessTitle="IT Consulting"
-          businessPara="IT consulting to align tech with goals through strategy, cybersecurity, software, cloud services, and project management."
+          businessPara="Align tech with goals using smart IT strategy."
           btText1="Learn More"
           btText2="Contact us"
         />
@@ -82,7 +81,7 @@ const Services = () => {
           image={SEO}
           altText="Marketing Services"
           businessTitle="Marketing consultancy"
-          businessPara="Marketing consulting that delivers brand growth, digital campaigns, strategy, research, content creation, and social media success."
+          businessPara="Grow your brand through focused marketing and research."
           btText1="Learn More"
           btText2="Contact us"
         />
@@ -92,7 +91,7 @@ const Services = () => {
           image={SocialMedia}
           altText="Sales Services"
           businessTitle="Sales consultancy"
-          businessPara="Sales consulting to improve strategy, training, CRM, metrics, and team performance for consistent and scalable revenue growth."
+          businessPara="Boost revenue with data-driven and skilled saleswork."
           btText1="Learn More"
           btText2="Contact us"
         />
