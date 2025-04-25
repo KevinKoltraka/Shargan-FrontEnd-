@@ -7,7 +7,7 @@ const Events = () => {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
-  const eventsPerPage = 4;
+  const eventsPerPage = 3;
 
   // Sample event data - replace with your actual data fetching
   useEffect(() => {
@@ -17,84 +17,72 @@ const Events = () => {
       const eventData = [
         {
           id: 1,
-          title: "Annual Tech Conference",
-          date: "2025-05-15",
-          time: "09:00 AM - 05:00 PM",
-          location: "Convention Center",
-          category: "technology",
-          description: "Join us for the biggest tech conference of the year featuring keynote speakers, workshops, and networking opportunities.",
+          title: "Shargan Consulting at GETEX Fair Education 2025 – Dubai",
+          date: "2025-04-30",
+          time: "All Day",
+          location: "Dubai World Trade Centre, Dubai",
+          category: "Impact & Causes",
+          description: "Join Shargan Consulting at the GETEX Fair Education 2025 in Dubai to explore academic opportunities in Albania, meet education experts, and get guidance on study programs and visa support.",
           mediaType: "image",
           media: "/api/placeholder/400/250"
         },
         {
           id: 2,
-          title: "Charity Fundraiser Gala",
-          date: "2025-06-10",
-          time: "07:00 PM - 11:00 PM",
-          location: "Grand Ballroom",
-          category: "charity",
-          description: "An evening of fine dining and entertainment to raise funds for local education initiatives.",
-          mediaType: "video",
-          media: "/api/placeholder/400/250", // This would be a video URL in production
+          title: "Little talk about the real meaning of marketing and strategy",
+          date: "2024-07-13",
+          time: "11:00",
+          location: null,
+          category: "Business & Strategy",
+          description: "This organization is a collaboration with Mr. Gjergj Mero Creative Director. Participation in the training is limited, we welcome you",
+          mediaType: "image",
+          media: "/api/placeholder/400/250",
           thumbnail: "/api/placeholder/400/250"
         },
         {
           id: 3,
-          title: "Product Launch Event",
-          date: "2025-05-22",
-          time: "06:00 PM - 09:00 PM",
-          location: "Innovation Hub",
-          category: "business",
-          description: "Be the first to experience our revolutionary new product line with demonstrations and special offers.",
+          title: "The executive presence of the Woman (not masculinized) at work, lecturer Dr.Matilda Likaj",
+          date: "2024-03-16",
+          time: "11:00",
+          location: null, // Example with null location
+          category: "Learning & Growth",
+          description: "At the end of the training, the participants will be provided with a certificate",
           mediaType: "image",
           media: "/api/placeholder/400/250"
         },
         {
           id: 4,
-          title: "Community Workshop",
-          date: "2025-05-30",
-          time: "10:00 AM - 12:00 PM",
-          location: "Community Center",
-          category: "education",
-          description: "Learn practical skills in this hands-on workshop led by industry experts.",
-          mediaType: "video",
-          media: "/api/placeholder/400/250", // This would be a video URL in production
+          title: "Staff turnover, how to analyze and how to stop it",
+          date: "2024-02-24",
+          time: "11:00",
+          location: null, // Example with null location
+          category: "Learning & Growth",
+          description: "Learn practical strategies to analyze and prevent staff turnover in this impactful 90-minute HR training session.",
+          mediaType: "image",
+          media: "/api/placeholder/400/250",
           thumbnail: "/api/placeholder/400/250"
         },
         {
           id: 5,
-          title: "Industry Networking Mixer",
-          date: "2025-06-05",
-          time: "05:30 PM - 08:30 PM",
-          location: "Business Lounge",
-          category: "business",
-          description: "Connect with professionals from your industry in a relaxed setting with refreshments provided.",
+          title: "Human resources training",
+          date: "2024-01-13",
+          time: null,
+          location: null,
+          category: "Learning & Growth",
+          description: "Empower your career with comprehensive HR training that blends theory and practice to boost your confidence and success in the job market.",
           mediaType: "image",
           media: "/api/placeholder/400/250"
         },
         {
           id: 6,
-          title: "Educational Seminar",
-          date: "2025-06-15",
-          time: "02:00 PM - 04:00 PM",
-          location: "Learning Center",
-          category: "education",
-          description: "An in-depth seminar covering the latest developments and best practices in the field.",
+          title: "Introduction to the world of work and the right approach to follow in the first steps",
+          date: "2023-09-07",
+          time: "90-120 minutes",
+          location: null,
+          category: "Learning & Growth",
+          description: "Gain essential insights into job interviews, employment rights, and onboarding to confidently navigate your first steps into the professional world.",
           mediaType: "image",
           media: "/api/placeholder/400/250"
         },
-        {
-          id: 7,
-          title: "Startup Pitch Competition",
-          date: "2025-06-20",
-          time: "01:00 PM - 05:00 PM",
-          location: "Innovation Hub",
-          category: "business",
-          description: "Watch innovative startups pitch their ideas to investors and compete for funding.",
-          mediaType: "video",
-          media: "/api/placeholder/400/250", // This would be a video URL in production
-          thumbnail: "/api/placeholder/400/250"
-        }
       ];
 
       setEvents(eventData);
@@ -112,7 +100,7 @@ const Events = () => {
   const filterEventsByCategory = (category) => {
     setActiveCategory(category);
     setCurrentPage(1);
-    
+
     if (category === 'all') {
       setFilteredEvents(events);
     } else {
@@ -158,17 +146,17 @@ const Events = () => {
   return (
     <div className="events-container">
       <h1 className="events-title">Upcoming Events</h1>
-      
+
       {/* Category Filters */}
       <div className="filter-container">
-        <button 
+        <button
           className={`filter-button ${activeCategory === 'all' ? 'active' : ''}`}
           onClick={() => filterEventsByCategory('all')}
         >
           All Events
         </button>
         {categories.map(category => (
-          <button 
+          <button
             key={category}
             className={`filter-button ${activeCategory === category ? 'active' : ''}`}
             onClick={() => filterEventsByCategory(category)}
@@ -177,7 +165,7 @@ const Events = () => {
           </button>
         ))}
       </div>
-      
+
       {/* Events Grid */}
       <div className="events-grid">
         {currentEvents.length > 0 ? (
@@ -200,20 +188,27 @@ const Events = () => {
               <div className="event-content">
                 <h3 className="event-title">{event.title}</h3>
                 <div className="event-details">
-                  <div className="event-detail">
-                    <svg className="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                      <circle cx="12" cy="9" r="2.5" />
-                    </svg>
-                    <span>{event.location}</span>
-                  </div>
-                  <div className="event-detail">
-                    <svg className="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M12 6v6l4 2" />
-                    </svg>
-                    <span>{event.time}</span>
-                  </div>
+                  {/* Only render location if it's not null */}
+                  {event.location && (
+                    <div className="event-detail">
+                      <svg className="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                        <circle cx="12" cy="9" r="2.5" />
+                      </svg>
+                      <span>{event.location}</span>
+                    </div>
+                  )}
+
+                  {/* Only render time if it's not null */}
+                  {event.time && (
+                    <div className="event-detail">
+                      <svg className="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                      </svg>
+                      <span>{event.time}</span>
+                    </div>
+                  )}
                 </div>
                 <p className="event-description">{event.description}</p>
                 <div className="event-footer">
@@ -234,12 +229,12 @@ const Events = () => {
           </div>
         )}
       </div>
-      
+
       {/* Pagination */}
       {totalPages > 1 && (
         <div className="pagination">
-          <button 
-            className="pagination-button prev" 
+          <button
+            className="pagination-button prev"
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
           >
@@ -247,7 +242,7 @@ const Events = () => {
               <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
-          
+
           <div className="pagination-numbers">
             {Array.from({ length: totalPages }).map((_, index) => (
               <button
@@ -259,9 +254,9 @@ const Events = () => {
               </button>
             ))}
           </div>
-          
-          <button 
-            className="pagination-button next" 
+
+          <button
+            className="pagination-button next"
             onClick={() => paginate(currentPage + 1)}
             disabled={currentPage === totalPages}
           >
@@ -271,7 +266,6 @@ const Events = () => {
           </button>
         </div>
       )}
-
       <style jsx>{`
         /* Events Component Styles */
         :root {
@@ -293,8 +287,9 @@ const Events = () => {
         }
 
         .events-title {
+         font-family: cambria;
           text-align: center;
-          font-size: 2.5rem;
+          font-size: 4rem;
           font-weight: 700;
           margin-bottom: 2rem;
           color: var(--primary);
@@ -329,7 +324,7 @@ const Events = () => {
           border: 2px solid var(--primary);
           border-radius: 6px;
           font-weight: 600;
-          font-size: 0.95rem;
+          font-size: 1.5rem;
           cursor: pointer;
           transition: var(--transition);
         }
@@ -346,12 +341,13 @@ const Events = () => {
           box-shadow: var(--shadow);
         }
 
-        .events-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 2rem;
-          margin-bottom: 3rem;
-        }
+       .events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Set 3 equal-width columns */
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
 
         .event-card {
           background-color: var(--white);
@@ -456,6 +452,7 @@ const Events = () => {
           background-color: var(--accent);
           color: var(--primary);
           padding: 0.5rem 1rem;
+          font-size: 1.2rem;
           font-weight: 600;
           border-top-left-radius: 8px;
           z-index: 2;
@@ -469,8 +466,8 @@ const Events = () => {
         }
 
         .event-title {
-          font-size: 1.3rem;
-          font-weight: 700;
+          font-size: 1.8rem;
+          font-weight: 500;
           margin-bottom: 1rem;
           color: var(--primary);
           line-height: 1.3;
@@ -486,19 +483,19 @@ const Events = () => {
         .event-detail {
           display: flex;
           align-items: center;
-          font-size: 0.9rem;
+          font-size: 1.4rem;
           color: var(--primary);
         }
 
         .event-icon {
-          width: 1rem;
-          height: 1rem;
+          width: 1.4rem;
+          height: 1.4rem;
           margin-right: 0.5rem;
           color: var(--accent);
         }
 
         .event-description {
-          font-size: 0.95rem;
+          font-size: 1.5rem;
           line-height: 1.6;
           color: var(--primary);
           margin-bottom: 1.5rem;
@@ -508,23 +505,16 @@ const Events = () => {
         .event-footer {
           display: flex;
           align-items: center;
-          justify-content: space-between;
           margin-top: auto;
         }
 
         .event-category {
-          display: inline-block;
-          padding: 0.25rem 0.75rem;
-          background-color: var(--light-primary);
-          color: var(--primary);
-          border-radius: 16px;
-          font-size: 0.8rem;
-          font-weight: 600;
-          text-transform: capitalize;
+          display: none;
         }
 
         .event-buttons {
           display: flex;
+          align-item: flex-start;
           gap: 0.5rem;
         }
 
@@ -532,7 +522,7 @@ const Events = () => {
           border: none;
           border-radius: 6px;
           padding: 0.5rem 1rem;
-          font-size: 0.9rem;
+          font-size: 1.3rem;
           font-weight: 600;
           cursor: pointer;
           transition: var(--transition);
@@ -543,14 +533,9 @@ const Events = () => {
         }
 
         .register-btn {
-          background-color: var(--primary);
-          color: var(--white);
+          display: none;
         }
 
-        .register-btn:hover {
-          background-color: var(--accent);
-          color: var(--primary);
-        }
 
         .details-btn {
           background-color: var(--white);
@@ -559,7 +544,8 @@ const Events = () => {
         }
 
         .details-btn:hover {
-          background-color: var(--light-primary);
+           background-color: var(--accent);
+          color: var(--primary);
         }
 
         .no-events {

@@ -12,3 +12,12 @@ background: linear-gradient(
     #072c45 100%
 )
 
+All Events
+
+Tech & Innovation (instead of Technology)
+
+Impact & Causes (instead of Charity)
+
+Business & Strategy (more specific than just Business)
+
+Learning & Growth (instead of Education)
