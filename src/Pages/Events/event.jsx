@@ -22,15 +22,15 @@ const Events = () => {
         heroImg={uiDesign}
         heroAlt="Digital Success"
         imgClass="hero-img-custom-style"
-         style={{
-                  height: "90vh",
-                  width: "100%",
-                  backgroundImage: `url(${uiDesign})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  overflow: "hidden",
-                }}
+        style={{
+          height: "90vh",
+          width: "100%",
+          backgroundImage: `url(${uiDesign})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          overflow: "hidden",
+        }}
       />
       <AboutZolaha
         ClassNameabout_zolaha_section={"about-zolaha-section"}
@@ -101,7 +101,9 @@ const Events = () => {
         AboutImg={Mission}
         AboutZolahaImage="about-zolaha-img"
         CompanyName="Topic: Introduction to the world of work and the right approach to follow in the first steps"
-        CompanyDetails={"This seminar will focus on presenting the first steps of employment for recent graduates or those nearing graduation, along with an overview of practices followed in different companies. The training will begin by showcasing the most efficient ways of presenting oneself in a job interview and providing basic knowledge about post-selection rights and duties arising from a formal employment contract. We will discuss the best ways to protect employees' rights to maintain personal and professional integrity. Additionally, the onboarding process (recognition and inclusion in work processes), critical for first steps in any role, will be explained to provide clear directives for professional development. Based on these topics, questions and answers will be developed as desired."}
+        CompanyDetails={
+          "This seminar will focus on presenting the first steps of employment for recent graduates or those nearing graduation, along with an overview of practices followed in different companies. The training will begin by showcasing the most efficient ways of presenting oneself in a job interview and providing basic knowledge about post-selection rights and duties arising from a formal employment contract. We will discuss the best ways to protect employees' rights to maintain personal and professional integrity. Additionally, the onboarding process (recognition and inclusion in work processes), critical for first steps in any role, will be explained to provide clear directives for professional development. Based on these topics, questions and answers will be developed as desired."
+        }
         Checklist1="👉 Contact us for more information!"
         Checklist2="📞 Contact: +355 69 930 5604"
         Checklist3="📧 Email: info@sharganconsulting.com"

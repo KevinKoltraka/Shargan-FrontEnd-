@@ -1,244 +1,452 @@
-/* Base Styling */
+/* About Zolaha Section Styles */
+@font-face {
+  font-family: "MyCustomFont"; /* Choose any name */
+  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype"); /* use correct path & formats */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Main container styling */
 .announcements-section {
-  display: grid;
-  flex-direction: column; /* If you want stacked content */
-  align-items: center;
-  justify-content: center; /* Centers vertically if there's a fixed height or viewport height */
-  padding: 1rem 0.5rem;
-  color: #ffffff;
-  font-family: "Arial", sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "Arial", sans-serif;
+  background-color: white;
 }
 
-/* Header */
-.header {
-  text-align: center;
-}
-
-.header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-/* Filters */
+/* Filters section */
 .filters {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
   justify-content: center;
-  margin: 7rem 0 8rem;
-  gap:  0.5rem
 }
 
 .filter-btn {
   padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  border: none;
+  background-color: white;
+  color: #0e4c71;
+  border: 2px solid #0e4c71;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 5px;
-  background-color: #000000;
-  color: #fff;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: none !important;
-}
-
-.filter-btn.active {
-  background-color: #007bff;
-  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .filter-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  background-color: #0e4c71;
+  color: white;
+}
+
+.filter-btn.active {
+  background-color: #ffb100;
+  color: #0e4c71;
+  border-color: #ffb100;
 }
 
 .announcement-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* default: 2 in a row */
+  gap: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center; /* centers the grid itself if not full-width */
 }
 
-.card {
+/* When ONLY 1 child, center the item but keep same layout */
+.announcement-cards:has(:only-child) {
+  grid-template-columns: repeat(2, 1fr); /* Keep same layout as normal */
+}
+
+/* Center the only item manually */
+.announcement-cards:has(:only-child) > *:only-child {
+  grid-column: 1 / -1;           /* span across both columns */
+  justify-self: center;         /* center it */
+  max-width: 500px;             /* limit width */
   width: 100%;
-  padding: 1.5rem;
+}
+
+
+.card {
+  background-color: white;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: #ffffff;
-  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(14, 76, 113, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  height: 550px; /* Fixed height for all cards */
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 24px rgba(14, 76, 113, 0.15);
 }
 
 .card h2 {
-  font-size: 1.7rem;
-  margin-bottom: 1rem;
-  color: #000000;
-  font-family: "Roboto", sans-serif;
+  color: #0e4c71;
+  padding: 1rem;
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Cambria";
+  border-bottom: 2px solid #ffb100;
 }
 
-p {
-  font-size: 1.4rem;
-  margin-top: 10px;
-  color: #000000;
-  font-family: "Roboto", sans-serif;
+.card p {
+  padding: 0 1rem;
+  color: #333;
+  font-size: 1.7rem;
+  font-family: "MyCustomFont";
+  line-height: 1.5;
+}
+
+/* Content container to manage fixed space for text */
+.card-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media container with fixed dimensions */
+.media-container {
+  height: 250px; /* Fixed height for media */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  background-color: #f5f5f5;
+}
+
+/* Media content styling */
+.media {
+  width: 100%; /* Fill container width */
+  height: 250px; /* Fixed height for all media */
+  object-fit: contain; /* Maintains aspect ratio */
+  display: block;
+  max-width: 320px; /* Maximum width for media */
+}
+
+.video-wrapper {
+  position: relative;
+  width: 320px; /* Fixed width for video container */
+  height: 250px; /* Fixed height for video container */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure videos maintain the fixed dimensions */
+video.media {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  max-width: 320px;
 }
 
 /* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
-  margin: 7rem 0 0 0;
-
+  gap: 0.5rem;
+  margin-top: 2rem;
 }
 
 .page-btn {
-  padding: 0.5rem 0.8rem;
-  margin: 0 0.3rem;
-  border: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #0e4c71;
+  border: 1px solid #0e4c71;
+  border-radius: 50%;
   cursor: pointer;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: none !important;
-}
-
-.page-btn.active {
-  background-color: #007bff;
-  color: white;
+  transition: all 0.3s ease;
 }
 
 .page-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
+  background-color: #0e4c71;
+  color: white;
 }
 
-.media {
-  margin-top: 20px;
-  border-radius: 7px;
-  display: block;
+.page-btn.active {
+  background-color: #ffb100;
+  color: #0e4c71;
+  border-color: #ffb100;
+}
+
+/* Custom Video Controls - Add to your announcement.css file */
+/* Hide default controls */
+video.media::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Custom video player container */
+.custom-video-container {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%); /* Centers horizontally */
-}
-
-img.media {
   width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-video.media {
-  border-radius: 20px;
-  display: block;
-  position: relative;
-  transform: translateX(-50%); /* Centers horizontally */
-}
-
-/* Video Responsiveness */
-.video-wrapper {
-  border-radius: 20px;
-  position: relative;
-  padding-bottom: 26.5rem;
-  height: 0;
+  max-width: 320px;
+  height: 250px;
+  background-color: #000;
   overflow: hidden;
-  width: 100%;
-  max-width: 100%; /* Ensures responsiveness */
 }
 
-.video-wrapper iframe {
+/* Video element */
+.custom-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Custom controls container */
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-video-container:hover .video-controls {
+  opacity: 1;
+}
+
+/* Play/Pause button */
+.play-pause-btn {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.play-pause-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.play-pause-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+/* Progress bar */
+.progress-container {
+  flex-grow: 1;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #ffb100;
+  border-radius: 2px;
+  width: 0%;
+}
+
+.progress-handle {
+  width: 12px;
+  height: 12px;
+  background-color: #ffb100;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: none;
+}
+
+.progress-container:hover .progress-handle {
+  display: block;
+}
+
+/* Volume control */
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100px;
+  position: relative;
+}
+
+.volume-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volume-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+.volume-slider {
+  flex-grow: 1;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.volume-level {
+  height: 100%;
+  background-color: #ffb100;
+  border-radius: 2px;
+  width: 100%;
+}
+
+/* Fullscreen button */
+.fullscreen-btn {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+/* Time display */
+.time-display {
+  color: white;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Video overlay for initial play */
+.video-overlay {
+  border-radius: 2rem;
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.video-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.play-icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(255, 177, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%); /* Centers the iframe horizontally */
-  width: 500px;
-  height: 260px;
-  border-radius: 7px; /* Optional: If you want rounded corners */
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #ffb100;
+  animation: spin 1s linear infinite;
+  display: none;
 }
 
-@media (max-width: 899px) {
-  .announcement-cards {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card {
-    width: 100%; /* Example of adjusting card width */
-    margin-bottom: 20px;
-  }
-
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-@media (max-width: 638px) {
-  .announcement-cards {
-    display: flex;
-    flex-direction: column;
-  }
+/* Show loading spinner when video is loading */
+.custom-video-container.loading .loading-spinner {
+  display: block;
+}
 
-  .card {
-    width: 500px; /* Example of adjusting card width */
-    margin-bottom: 20px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .announcement-cards {
+    grid-template-columns: 1fr;
   }
 
   .filters {
-    display: block;
-    margin: 4rem 0 5rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .filter-btn {
-    margin-top: 12px;
+    width: 100%;
+    max-width: 250px;
   }
-
-  .pagination {
-    margin: 3rem 0 0 0;
-  
-  }
-
 }
 
-@media (max-width: 534px) {
-  .announcement-cards {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card {
-    width: 450px; /* Example of adjusting card width */
-    margin-bottom: 20px;
-  }
-
-  .pagination {
-    display: block;
-  }
-  .page-btn {
-    margin-top: 5px;
-  }
-
+/* Adding some highlighting for contact information */
+.card p:nth-child(3),
+.card p:nth-child(4),
+.card p:nth-child(5) {
+  color: #0e4c71;
 }
 
-@media (max-width: 480px) {
-  .announcement-cards {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card {
-    width: 99%; /* Example of adjusting card width */
-    margin-bottom: 20px;
-  }
-
-  video.media {
-    width: 100% !important;
+/* Adding some accent for details with emojis */
+.card p:has(span[role="img"]) {
+  font-weight: 500;
+  color: #0e4c71;
 }
-
-img.media {
-  width: 280px  !important;
-}
-
-}
-

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./contact.css";
-import ContactImg from "./../../images/chat.gif";
+import ContactImg from "./../../images/contact.jpg";
 import Social from "../../components/SocialIcons/Social";
 import Hero from "../../components/HeroSection/Hero";
 
@@ -57,10 +57,19 @@ const Contact = () => {
   return (
     <>
       <Hero
-        title="Contact Us"
-        description=""
+        title="Get"
+        description={`<span style="color:rgb(255, 255, 255);">in</span> Touch`}
         heroImg={ContactImg}
         urlLink="https://api.whatsapp.com/send?phone=355699305604"
+        style={{
+          height: "90vh",
+          width: "100%",
+          backgroundImage: `url(${ContactImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          overflow: "hidden",
+        }}
       />
 
       <div className="social-contact">
@@ -74,38 +83,38 @@ const Contact = () => {
               <h3>Enquiry Form</h3>
             </div>
             <div className="forms-item">
-            <div className="form-item">
-              <input
-                type="text"
-                name="sender"
-                required
-                placeholder="Enter your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <label>Name:</label>
-            </div>
-            <div className="form-item">
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <label>Email:</label>
-            </div>
-            <div className="form-item">
-              <textarea
-                name="message"
-                required
-                placeholder="Enter your message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              />
-              <label>Message:</label>
-            </div>
+              <div className="form-item">
+                <input
+                  type="text"
+                  name="sender"
+                  required
+                  placeholder="Enter your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <label>Name:</label>
+              </div>
+              <div className="form-item">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <label>Email:</label>
+              </div>
+              <div className="form-item">
+                <textarea
+                  name="message"
+                  required
+                  placeholder="Enter your message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+                <label>Message:</label>
+              </div>
             </div>
             <button type="submit" className="submit-btn" disabled={loading}>
               {loading ? "Sending..." : "Send"}
