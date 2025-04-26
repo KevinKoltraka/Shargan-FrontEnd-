@@ -171,8 +171,9 @@
     margin-bottom: 2rem;
   }
 
-  .left-about-zolaha-section img {
-    max-width: 95%;
+  .about-zolaha-img {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   .about-company-name h3 {

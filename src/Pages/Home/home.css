@@ -124,6 +124,11 @@
     width: 100%;
     padding: 1rem;
   }
+
+  .home-our-services h2 {
+    font-size: 3.4rem;
+    padding: 0 1rem;
+  }
   .our-partners-homepage {
     padding: 1rem 0 1rem 0;
   }

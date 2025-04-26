@@ -236,7 +236,7 @@ a {
 @media (max-width: 576px) {
   .cards-box {
     width: 100%;
-    max-width: 38rem;
+    max-width: 35rem;
     padding: 1rem;
     border-radius: 1.5rem;
   }
@@ -273,7 +273,7 @@ a {
 
 @media (max-width: 400px) {
   .cards-box {
-    max-width: 100%;
+    max-width: 95%;
     padding: 0.8rem;
   }
 }
