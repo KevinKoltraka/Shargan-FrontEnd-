@@ -495,6 +495,7 @@ const Events = () => {
         }
 
         .event-description {
+        font-family: "Cambria";
           font-size: 1.5rem;
           line-height: 1.6;
           color: var(--primary);
@@ -668,7 +669,9 @@ const Events = () => {
           }
           
           .events-title {
-            font-size: 1.8rem;
+             margin-top: 3rem;
+             margin-bottom: 3rem;
+            font-size: 3rem;
           }
           
           .pagination {

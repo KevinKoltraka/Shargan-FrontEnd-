@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
+import { FaInstagram, FaWhatsapp, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -24,6 +25,7 @@ const Footer = () => {
       alert("Popup blocked! Please allow popups for this site to proceed.");
     }
   };
+  
   return (
     <div className="footer-section">
       <div className="footer-section-box">
@@ -51,18 +53,26 @@ const Footer = () => {
           <div className="mobile-footer-links">
             <h3>Company</h3>
             <div className="link-in-footer">
-              <Link to="/terms" className="link"><li>Terms</li></Link>
-              <Link to="/disclaimer" className="link"><li>Disclaimer</li></Link>
-              <Link to="/privacy-policy" className="link"><li>Privacy Policy</li></Link>
+              <Link to="/terms" className="link">Terms</Link>
+              <Link to="/disclaimer" className="link">Disclaimer</Link>
+              <Link to="/privacy-policy" className="link">Privacy Policy</Link>
             </div>
           </div>
           <div className="mobile-footer-links">
             <h3>Social Links</h3>
             <div className="link-in-footer">
-              <Link to="https://www.instagram.com/shargan_consulting/" target="_blank" className="link"><li>Instagram</li></Link>
-              <Link to="https://api.whatsapp.com/send?phone=355699305604" target="_blank" className="link"><li>Whatsapp</li></Link>
-              <Link to="https://www.linkedin.com/in/klodjan-shaqiri-80536263/" target="_blank" className="link"><li>LinkedIn</li></Link>
-              <Link to="https://www.tiktok.com/@sharganconsulting" target="_blank" className="link"><li>TikTok</li></Link>
+              <Link to="https://www.instagram.com/shargan_consulting/" target="_blank" className="link social-icon">
+                <FaInstagram /> Instagram
+              </Link>
+              <Link to="https://api.whatsapp.com/send?phone=355699305604" target="_blank" className="link social-icon">
+                <FaWhatsapp /> Whatsapp
+              </Link>
+              <Link to="https://www.linkedin.com/in/klodjan-shaqiri-80536263/" target="_blank" className="link social-icon">
+                <FaLinkedinIn /> LinkedIn
+              </Link>
+              <Link to="https://www.tiktok.com/@sharganconsulting" target="_blank" className="link social-icon">
+                <FaTiktok /> TikTok
+              </Link>
             </div>
           </div>
         </div>

@@ -62,6 +62,7 @@ h4 {
 }
 
 p {
+  font-family: 'MyCustomFont'; 
   font-size: 1.55rem;
   margin-bottom: 1rem;
 }
@@ -172,6 +173,7 @@ button {
 }
 
 .event-title {
+  font-family: 'Cambria';
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -180,6 +182,7 @@ button {
 }
 
 .event-subtitle {
+  font-family: 'MyCustomFont';
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -312,6 +315,7 @@ button {
 
 .tab-content>h2 {
   margin-bottom: 1.5rem;
+  font-family: "Cambria";
   font-size: 3rem;
   position: relative;
   padding-bottom: 0.75rem;
@@ -328,6 +332,7 @@ button {
 }
 
 .tab-content>p {
+  font-family: "MyCustomFont";
   font-size: 2rem;
   color: #0e4c71;
   max-width: 1000px;
@@ -650,14 +655,17 @@ button {
 }
 
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .contact-info h2 {
+  font-family: "Cambria";
   font-size: 3rem;
   color: white;
   margin-bottom: 1.5rem;
@@ -689,6 +697,7 @@ button {
 }
 
 .contact-form {
+  width: 70%;
   background-color: white;
   padding: 2.5rem;
   border-radius: 8px;
@@ -707,6 +716,7 @@ button {
 }
 
 .form-group label {
+  position: unset;
   display: block;
   margin-bottom: 0.5rem;
   color: #0e4c71;
