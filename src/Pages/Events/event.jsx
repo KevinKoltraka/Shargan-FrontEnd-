@@ -680,15 +680,11 @@ const Events = () => {
           .events-container {
             padding: 2rem 0.75rem;
           }
-          
-          .events-title {
-            font-size: 1.5rem;
-          }
-          
-          .event-title {
-            font-size: 1.2rem;
-          }
-          
+
+           .event-title {
+           text-align: left;
+           }
+           
           .event-content {
             padding: 1.25rem;
           }
