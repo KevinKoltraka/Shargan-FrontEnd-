@@ -179,7 +179,7 @@ export const TechConferenceDetail = () => {
           </div>
           <div className="hero-buttons">
             <button
-              className="primary-button"
+              className="primary-button2"
               onClick={() => {
                 window.open('https://wa.me/355699305604?text=Hello!%20I%20would%20like%20to%20request%20a%20consultation.', '_blank');
               }}
