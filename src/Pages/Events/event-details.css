@@ -853,7 +853,7 @@ button {
   }
   
   .contact-container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
   
   .contact-info {
@@ -891,6 +891,10 @@ button {
   
   .hero-buttons {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-form {
     width: 100%;
   }
   
