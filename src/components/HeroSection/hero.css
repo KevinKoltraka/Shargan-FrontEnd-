@@ -42,7 +42,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Cambria';
 }
 
 .left-hero-section-content p {
@@ -54,7 +54,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: "Cambria";
+  font-family: 'Cambria';
   word-spacing: normal;
   text-align: left;
 }
@@ -167,6 +167,7 @@
     width: 100%;
     padding: 0rem;
     /* height: 100vh; */
+    clip-path: none;
   }
 
   .left-hero-section {

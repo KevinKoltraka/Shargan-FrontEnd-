@@ -236,7 +236,7 @@ a {
 @media (max-width: 576px) {
   .cards-box {
     width: 100%;
-    max-width: 24rem;
+    max-width: 38rem;
     padding: 1rem;
     border-radius: 1.5rem;
   }
@@ -254,7 +254,8 @@ a {
   }
 
   .button-box {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 0.8rem;
   }
 

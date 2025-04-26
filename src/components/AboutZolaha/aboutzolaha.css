@@ -166,6 +166,11 @@
 
 @media (max-width: 480px) {
 
+  [class*="about-zolaha-section"] {
+    clip-path: none;
+    margin-bottom: 2rem;
+  }
+
   .left-about-zolaha-section img {
     max-width: 95%;
   }
