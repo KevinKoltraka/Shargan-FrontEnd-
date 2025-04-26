@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoadingComponent.css';
-import logo from '../../images/Logo.png'; // Adjust the path to your logo
+import logo from '../../images/Logo.svg'; // Adjust the path to your logo
 
 const LoadingComponent = () => {
   return (
