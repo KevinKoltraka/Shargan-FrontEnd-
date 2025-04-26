@@ -46,9 +46,6 @@ const Home = () => {
         Checklist1="Recruitment Marketing"
         Checklist2="Talent Acquisition"
         Checklist3="Employer Branding"
-        Checklist4={null}
-        Checklist5={null}
-        Checklist6={null}
         FaIcon={<FiBox />}
       />
 

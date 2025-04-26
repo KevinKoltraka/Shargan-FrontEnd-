@@ -12,7 +12,7 @@
 }
 
 .our-partners-homepage h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Cambria';
   font-size: 4rem;
   margin-bottom: 2rem;
   margin-top: 3rem;
@@ -113,6 +113,7 @@
   }
 
   .who-we-are-section {
+    margin-bottom: 2rem;
     padding-left: 0rem;
     padding-right: 0rem;
   }
@@ -123,6 +124,10 @@
     margin: 0 !important;
     width: 100%;
     padding: 1rem;
+  }
+
+  .home-our-services {
+    margin:0;
   }
 
   .home-our-services h2 {

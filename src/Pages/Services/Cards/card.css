@@ -246,11 +246,11 @@ a {
   }
 
   .card-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .card-para {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   .button-box {
@@ -262,7 +262,7 @@ a {
   .primary-button,
   .secondary-button {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0.6rem 0.8rem;
   }
 

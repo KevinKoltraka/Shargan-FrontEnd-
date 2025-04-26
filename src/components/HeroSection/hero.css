@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "MyCustomFont"; /* Choose any name */
-  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype"); /* use correct path & formats */
+  font-family: "MyCustomFont";
+  /* Choose any name */
+  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype");
+  /* use correct path & formats */
   font-weight: normal;
   font-style: normal;
 }
@@ -160,13 +162,13 @@
 /* Responsive navbar For Mobile */
 @media (max-width: 500px) {
   .hero-section {
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
     padding: 0rem;
-    /* height: 100vh; */
+    height: 30vh !important;
     clip-path: none;
   }
 
@@ -180,20 +182,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 0 0 0 ;
+    padding: 5rem 0 0 0;
     margin-top: 0;
 
   }
 
   .left-hero-section-content h2 {
-    font-size: 4rem;
-    text-align: center;
+    display: none;
   }
 
   .left-hero-section-content p {
-    font-size: 4rem;
-    text-align: center;
-    margin: 0;
+    display: none;
   }
 
   .send-message {
@@ -222,6 +221,6 @@
   }
 
   .button-header {
-    font-size: 1.4rem;
+    display: none;
   }
 }
