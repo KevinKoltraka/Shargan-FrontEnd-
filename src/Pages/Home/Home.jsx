@@ -1,5 +1,5 @@
 import AboutZolaha from "../../components/AboutZolaha/AboutZolaha";
-import SharganImage from "/pexels-ingo-188035.jpg";
+import SharganImage from "./../../images/pexels-ingo-188035.jpg";
 import Hero from "../../components/HeroSection/Hero";
 import Partner from "../../components/Partners/Partner";
 import AboutImage from "./../../images/mission.jpg";
