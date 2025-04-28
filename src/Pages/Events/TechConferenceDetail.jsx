@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LoadingComponent from './LoadingComponent';
 import "./event-details.css";
@@ -150,7 +150,7 @@ export const TechConferenceDetail = () => {
     return (
       <div className="not-found-container">
         <h2>Event Not Found</h2>
-        <p>The event information you're looking for doesn't exist or has been removed.</p>
+        <p>The event information you are looking for does not exist or has been removed.</p>
         <Link to="/events" className="back-button">Back to Events</Link>
       </div>
     );
@@ -266,19 +266,6 @@ export const TechConferenceDetail = () => {
                   <div key={index} className="university-card">
                     <h4>{uni.name}</h4>
                     <p>{uni.programs}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="consultants-section">
-              <h3>Meet Our Team</h3>
-              <div className="consultants-grid">
-                {event.consultants.map((consultant, index) => (
-                  <div key={index} className="consultant-card">
-                    <h4>{consultant.name}</h4>
-                    <p className="consultant-role">{consultant.role}</p>
-                    <p>{consultant.bio}</p>
                   </div>
                 ))}
               </div>
