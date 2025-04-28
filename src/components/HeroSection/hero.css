@@ -188,11 +188,15 @@
   }
 
   .left-hero-section-content h2 {
-    display: none;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
   }
 
   .left-hero-section-content p {
-    display: none;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
   }
 
   .send-message {
