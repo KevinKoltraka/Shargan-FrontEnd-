@@ -275,5 +275,7 @@ a {
   .cards-box {
     max-width: 95%;
     padding: 0.8rem;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

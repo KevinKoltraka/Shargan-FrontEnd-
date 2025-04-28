@@ -1102,7 +1102,6 @@ button {
   .tabs-container {
     overflow: auto;
     -ms-overflow-style: none; 
-    scrollbar-width: none; 
   }
 
   .tabs-container::-webkit-scrollbar {
