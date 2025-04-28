@@ -468,18 +468,6 @@ const Announcements = () => {
           },
         },
         {
-          id: 9,
-          title:
-            "The next training from Shargan Consulting will deal with a very interesting topic 'Paradoxical leadership, the opposite who fit' on 06.04.2024 at 11:00 near its offices in Pajtoni Center. We welcome you!",
-          category: "Trainings",
-
-          media: {
-            type: "image",
-            url: "/training4.jpg",
-            style: { width: "345px" },
-          },
-        },
-        {
           id: 10,
           title:
             "The month of March is dedicated to the figure of the woman and Shargan Consulting shared with the participants the topic 'Executive presence of the woman (not masculinized) at work' with trainer Dr. Matilda Likaj.",
@@ -560,18 +548,6 @@ const Announcements = () => {
           },
         },
         {
-          id: 16,
-          title:
-            "Shargan Consulting, in the next collaboration with the best companies in the market, offers employment",
-          category: "Job Offer",
-
-          media: {
-            type: "image",
-            url: "/njoftim.jpg",
-            style: { width: "305px" },
-          },
-        },
-        {
           id: 17,
           title:
             "Shargan Consulting offers the new program of mentoring and theoretical and professional preparation in the position of 'Human Resources Specialist' as well as the possibility of presenting applicants' candidacies to interested companies",
@@ -583,21 +559,7 @@ const Announcements = () => {
             style: { width: "300px" },
           },
         },
-        {
-          id: 18,
-          title: "Human resources in Albania...",
-          category: "Interviews",
-          details:
-            "Human resources in Albania have advanced, focusing on talent development, employee retention, and global standards. Despite challenges like skill gaps, high turnover, and migration, organizations are improving workplace culture and offering growth opportunities. These efforts aim to meet the evolving demands of the local labor market.",
-          details2: "👉 Contact us for more information!",
-          details3: "📞 Contact: +355 69 930 5604",
-          details4: "📧 Email: info@sharganconsulting.com",
-          media: {
-            type: "video",
-            url: "/instavid4.mp4",
-            style: { width: "450px" },
-          },
-        },
+
         {
           id: 19,
           title: "Two important elements in an interview",
@@ -614,30 +576,6 @@ const Announcements = () => {
           },
         },
         {
-          id: 20,
-          title: "Interview with piskproduction!! (part 1)",
-          category: "Interviews",
-          details2: "👉 Contact us for more information!",
-          details3: "📞 Contact: +355 69 930 5604",
-          details4: "📧 Email: info@sharganconsulting.com",
-          media: {
-            type: "video",
-            url: "/instavid6.mp4",
-          },
-        },
-        {
-          id: 21,
-          title: "Interview with piskproduction!! (part 2)",
-          category: "Interviews",
-          details2: "👉 Contact us for more information!",
-          details3: "📞 Contact: +355 69 930 5604",
-          details4: "📧 Email: info@sharganconsulting.com",
-          media: {
-            type: "video",
-            url: "/instavid5.mp4",
-          },
-        },
-        {
           id: 22,
           title: "How to understand TOXIC employees",
           category: "Employer-Employee Dynamics",
@@ -647,19 +585,6 @@ const Announcements = () => {
           media: {
             type: "video",
             url: "/training13.mp4",
-            style: { width: "320px" },
-          },
-        },
-        {
-          id: 23,
-          title:
-            "'Burnout, awareness, identification, treatment' training cycles began",
-          category: "Trainings",
-          details3: "📞 Contact: +355 69 930 5604",
-          details4: "📧 Email: info@sharganconsulting.com",
-          media: {
-            type: "video",
-            url: "/training14.mp4",
             style: { width: "320px" },
           },
         },
@@ -712,63 +637,6 @@ const Announcements = () => {
             url: "/training17.mp4",
           },
         },
-        {
-          id: 28,
-          category: "Motivational Talks",
-          media: {
-            type: "image",
-            url: "/training18.jpg",
-            style: { width: "410px" },
-          },
-        },
-        {
-          id: 29,
-          category: "Motivational Talks",
-          media: {
-            type: "image",
-            url: "/training19.jpg",
-            style: { width: "410px" },
-          },
-        },
-        {
-          id: 30,
-          category: "Motivational Talks",
-          media: {
-            type: "image",
-            url: "/training20.jpg",
-            style: { width: "410px" },
-          },
-        },
-        {
-          id: 31,
-          title: "COMING SOON",
-          category: "Trainings",
-          media: {
-            type: "image",
-            url: "/training21.jpg",
-            style: { width: "410px" },
-          },
-        },
-        {
-          id: 32,
-          title: "COMING SOON",
-          category: "Trainings",
-          media: {
-            type: "image",
-            url: "/training22.jpg",
-            style: { width: "410px" },
-          },
-        },
-        {
-          id: 33,
-          title: "COMING SOON",
-          category: "Trainings",
-          media: {
-            type: "image",
-            url: "/training23.jpg",
-            style: { width: "410px" },
-          },
-        },
       ];
       // Simulate a slower API response for testing
       setTimeout(() => {
@@ -810,7 +678,6 @@ const Announcements = () => {
           "Shargan OFFERS...",
           "Interviews",
           "Trainings",
-          "Job Offer",
           "Employer-Employee Dynamics",
           "Motivational Talks",
         ].map((cat) => (
