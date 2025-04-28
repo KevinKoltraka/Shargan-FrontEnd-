@@ -13,9 +13,6 @@ const AboutZolaha = ({
   Checklist1,
   Checklist2,
   Checklist3,
-  Checklist4,
-  Checklist5,
-  Checklist6,
 }) => {
   return (
     <>
@@ -50,35 +47,7 @@ const AboutZolaha = ({
                 {FaIcon} {Checklist3}
               </p>
             </div>
-            <div className="checklist-company">
-              <p>
-                {" "}
-                {Checklist4 && (
-                  <p>
-                    {" "}
-                    {FaIcon} <li>{Checklist4}</li>{" "}
-                  </p>
-                )}
-              </p>
-              <p>
-                {" "}
-                {Checklist5 && (
-                  <p>
-                    {" "}
-                    {FaIcon} <li>{Checklist5}</li>{" "}
-                  </p>
-                )}
-              </p>
-              <p>
-                {" "}
-                {Checklist6 && (
-                  <p>
-                    {" "}
-                    {FaIcon} <li>{Checklist6}</li>{" "}
-                  </p>
-                )}
-              </p>
-            </div>
+         
           </div>
         </div>
       </div>

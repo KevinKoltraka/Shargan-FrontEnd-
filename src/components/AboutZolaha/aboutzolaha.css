@@ -166,12 +166,18 @@
 
 @media (max-width: 480px) {
 
-  [class*="about-zolaha-section"] {
+  .about-zolaha-section {
     clip-path: none;
     margin: 0 0 2rem 0;
     padding: 0.5rem 0.5rem ;
+    flex-direction: column-reverse;
   }
-
+  .about-zolaha-section > div:first-child {
+    padding: 0;
+  }
+  .about-zolaha-section > div:last-child {
+    padding: 0 0.5rem;
+  }
   .about-zolaha-img {
     max-width: 100% !important;
     width: 100% !important;
