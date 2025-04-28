@@ -5,9 +5,9 @@
 /* Global Reset and Base Styles */
 
 @font-face {
-  font-family: 'MyCustomFont';
+  font-family: "MyCustomFont";
   /* Choose any name */
-  src: url('/fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+  src: url("/fonts/MYRIADPRO-REGULAR.OTF") format("opentype");
   /* use correct path & formats */
   font-weight: normal;
   font-style: normal;
@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: 'MyCustomFont';
+  font-family: "MyCustomFont";
   line-height: 1.6;
   color: #333;
   background-color: #f8f9fa;
@@ -62,7 +62,7 @@ h4 {
 }
 
 p {
-  font-family: 'MyCustomFont'; 
+  font-family: "MyCustomFont";
   font-size: 1.55rem;
   margin-bottom: 1rem;
 }
@@ -152,13 +152,17 @@ button {
 }
 
 .event-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(14, 76, 113, 0.9), rgba(14, 76, 113, 0.6));
+  background: linear-gradient(
+    to right,
+    rgba(14, 76, 113, 0.9),
+    rgba(14, 76, 113, 0.6)
+  );
   z-index: 1;
 }
 
@@ -173,7 +177,7 @@ button {
 }
 
 .event-title {
-  font-family: 'Cambria';
+  font-family: "Cambria";
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -182,7 +186,7 @@ button {
 }
 
 .event-subtitle {
-  font-family: 'MyCustomFont';
+  font-family: "MyCustomFont";
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -281,7 +285,7 @@ button {
 }
 
 .tab.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -313,7 +317,7 @@ button {
   }
 }
 
-.tab-content>h2 {
+.tab-content > h2 {
   margin-bottom: 1.5rem;
   font-family: "Cambria";
   font-size: 3rem;
@@ -321,8 +325,8 @@ button {
   padding-bottom: 0.75rem;
 }
 
-.tab-content>h2::after {
-  content: '';
+.tab-content > h2::after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -331,7 +335,7 @@ button {
   background-color: #ffb100;
 }
 
-.tab-content>p {
+.tab-content > p {
   font-family: "MyCustomFont";
   font-size: 2rem;
   color: #0e4c71;
@@ -523,7 +527,7 @@ button {
 }
 
 .schedule-day h3::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -552,7 +556,7 @@ button {
 }
 
 .session-item::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -1.75rem;
   top: 50%;
@@ -627,7 +631,7 @@ button {
 }
 
 .faq-item h3::before {
-  content: 'Q:';
+  content: "Q:";
   color: #ffb100;
   margin-right: 0.5rem;
   font-weight: 700;
@@ -752,6 +756,7 @@ button {
   display: flex;
   align-items: center;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -823,11 +828,11 @@ button {
   .event-title {
     font-size: 3.5rem;
   }
-  
+
   .event-subtitle {
     font-size: 2.2rem;
   }
-  
+
   .contact-container {
     gap: 2rem;
   }
@@ -838,32 +843,32 @@ button {
   .event-hero {
     height: 400px;
   }
-  
+
   .event-title {
     font-size: 3rem;
   }
-  
+
   .event-subtitle {
     font-size: 2rem;
   }
-  
+
   .tab {
     padding: 1rem 1.2rem;
     font-size: 1.5rem;
   }
-  
+
   .contact-container {
     flex-direction: column;
   }
-  
+
   .contact-info {
     text-align: center;
   }
-  
+
   .programs-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-  
+
   .benefit-item h4,
   .university-card h4 {
     font-size: 1.6rem;
@@ -875,20 +880,20 @@ button {
   .content-section {
     padding: 2rem 4%;
   }
-  
+
   .event-hero {
     height: 350px;
     padding: 0 4%;
   }
-  
+
   .event-title {
     font-size: 2.8rem;
   }
-  
+
   .event-subtitle {
     font-size: 1.8rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     width: 100%;
@@ -897,25 +902,25 @@ button {
   .contact-form {
     width: 100%;
   }
-  
+
   .primary-button2 {
     width: 100%;
     max-width: none;
     text-align: center;
   }
-  
+
   .tabs-container {
     justify-content: flex-start;
   }
-  
+
   .tab-content > h2 {
     font-size: 2.5rem;
   }
-  
+
   .tab-content > p {
     font-size: 1.8rem;
   }
-  
+
   .universities-grid,
   .consultants-grid {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -927,23 +932,23 @@ button {
   h1 {
     font-size: 2.2rem;
   }
-  
+
   h2 {
     font-size: 1.8rem;
   }
-  
+
   h3 {
     font-size: 2.2rem;
   }
-  
+
   h4 {
     font-size: 1.6rem;
   }
-  
+
   p {
     font-size: 1.5rem;
   }
-  
+
   .event-hero {
     margin-top: 1rem;
     text-align: center;
@@ -953,59 +958,59 @@ button {
     width: 65%;
     align-self: center;
   }
-  
+
   .hero-content {
     align-items: center;
   }
-  
+
   .event-title {
     font-size: 2.5rem;
     text-align: center;
   }
-  
+
   .event-subtitle {
     font-size: 1.7rem;
     text-align: center;
   }
-  
+
   .event-meta {
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .tab {
     padding: 0.75rem 1rem;
     font-size: 1.4rem;
   }
-  
+
   .tabs-container {
     padding: 0 0.5rem;
   }
-  
+
   .benefits-grid,
   .universities-grid,
   .consultants-grid,
   .programs-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-form {
     padding: 1.5rem;
   }
-  
+
   .contact-form h3 {
     font-size: 2.5rem;
   }
-  
+
   .consultant-role {
     font-size: 1.5rem;
   }
-  
+
   .program-category h3 {
     font-size: 2.2rem;
   }
-  
+
   .program-category ul li,
   .highlights-list li,
   .session-time,
@@ -1015,18 +1020,18 @@ button {
   .schedule-note p {
     font-size: 1.5rem;
   }
-  
+
   .form-group input,
   .form-group select,
   .form-group textarea,
   .submit-button {
     font-size: 1.4rem;
   }
-  
+
   .event-footer p {
     font-size: 1.7rem;
   }
-  
+
   .event-footer p:last-child {
     font-size: 1.3rem;
   }
@@ -1037,28 +1042,28 @@ button {
   .event-title {
     font-size: 2.3rem;
   }
-  
+
   .event-subtitle {
     font-size: 1.6rem;
   }
-  
+
   .tab {
     padding: 0.6rem 0.8rem;
     font-size: 1.3rem;
   }
-  
+
   .tab-content > h2 {
     font-size: 2.2rem;
   }
-  
+
   .tab-content > p {
     font-size: 1.6rem;
   }
-  
+
   .contact-info h2 {
     font-size: 2.5rem;
   }
-  
+
   .contact-info p {
     font-size: 1.8rem;
   }
@@ -1069,16 +1074,16 @@ button {
   .event-hero {
     height: 250px;
   }
-  
+
   .event-title {
     font-size: 2.2rem;
   }
-  
+
   .event-subtitle {
     font-size: 1.6rem;
     margin-bottom: 0.75rem;
   }
-  
+
   .hero-buttons {
     margin-top: 1rem;
   }
@@ -1093,13 +1098,13 @@ button {
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-  
-  /* Improve scroll behavior on tabs */
+
   .tabs-container {
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    overflow: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
   }
-  
+
   .tabs-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
