@@ -494,7 +494,7 @@ video.media::-webkit-media-controls {
   .filters {
     flex-direction: row;
     overflow-x: auto;
-    padding-bottom: 0.5rem;
+    margin: 2rem 0;
     justify-content: flex-start;
   }
   
@@ -522,7 +522,7 @@ video.media::-webkit-media-controls {
 /* Mobile phones */
 @media screen and (max-width: 500px) {
   .announcements-section {
-    padding: 4rem 0.5rem;
+    padding: 1.5rem 0.5rem;
   }
 
   .announcement-cards:has(:only-child) {
