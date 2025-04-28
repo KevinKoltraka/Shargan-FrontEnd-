@@ -320,7 +320,7 @@ const Events = () => {
           background-color: var(--white);
           color: var(--primary);
           border: 2px solid var(--primary);
-          border-radius: 6px;
+          border-radius: 20px;
           font-weight: 600;
           font-size: 1.5rem;
           cursor: pointer;
