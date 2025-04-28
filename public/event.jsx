@@ -24,7 +24,7 @@ const Events = () => {
           category: "Impact & Causes",
           description: "Join Shargan Consulting at the GETEX Fair Education 2025 in Dubai to explore academic opportunities in Albania, meet education experts, and get guidance on study programs and visa support.",
           mediaType: "image",
-          media: "/1.jpg"
+          media: "./../../images/1.jpg"
         },
         {
           id: 2,
@@ -35,7 +35,8 @@ const Events = () => {
           category: "Business & Strategy",
           description: "This organization is a collaboration with Mr. Gjergj Mero Creative Director. Participation in the training is limited, we welcome you",
           mediaType: "image",
-          media: "/2.jpg",
+          media: "/api/placeholder/400/250",
+          thumbnail: "./../../images/1.jpg"
         },
         {
           id: 3,
@@ -46,7 +47,7 @@ const Events = () => {
           category: "Learning & Growth",
           description: "At the end of the training, the participants will be provided with a certificate",
           mediaType: "image",
-          media: "/3.jpg"
+          media: "/api/placeholder/400/250"
         },
         {
           id: 4,
@@ -57,7 +58,8 @@ const Events = () => {
           category: "Learning & Growth",
           description: "Learn practical strategies to analyze and prevent staff turnover in this impactful 90-minute HR training session.",
           mediaType: "image",
-          media: "/4.jpg",
+          media: "/api/placeholder/400/250",
+          thumbnail: "/api/placeholder/400/250"
         },
         {
           id: 5,
@@ -68,7 +70,7 @@ const Events = () => {
           category: "Learning & Growth",
           description: "Empower your career with comprehensive HR training that blends theory and practice to boost your confidence and success in the job market.",
           mediaType: "image",
-          media: "/5.jpg"
+          media: "/api/placeholder/400/250"
         },
         {
           id: 6,
@@ -79,7 +81,7 @@ const Events = () => {
           category: "Learning & Growth",
           description: "Gain essential insights into job interviews, employment rights, and onboarding to confidently navigate your first steps into the professional world.",
           mediaType: "image",
-          media: "/6.jpg"
+          media: "/api/placeholder/400/250"
         },
       ];
 
