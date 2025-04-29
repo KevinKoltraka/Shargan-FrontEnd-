@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   padding-bottom: 0rem;
   padding-left: 0rem;
   background-image: url("/pexels-ingo-188035.jpg");
@@ -182,21 +182,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 0 0 0;
+    padding: 0;
     margin-top: 0;
 
   }
 
   .left-hero-section-content h2 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin: 0;
     padding: 0;
+    color: #0e4c71;
   }
 
   .left-hero-section-content p {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin: 0;
     padding: 0;
+    color: #ffffff;
   }
 
   .send-message {
