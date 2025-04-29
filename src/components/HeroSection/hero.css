@@ -44,7 +44,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: 'Cambria';
+  font-family: "Cambria";
 }
 
 .left-hero-section-content p {
@@ -56,7 +56,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: 'Cambria';
+  font-family: "Cambria";
   word-spacing: normal;
   text-align: left;
 }
@@ -184,7 +184,6 @@
     justify-content: center;
     padding: 0;
     margin-top: 0;
-
   }
 
   .left-hero-section-content h2 {
@@ -196,10 +195,6 @@
 
   .left-hero-section-content p {
     font-size: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin: 0;
     padding: 0;
     color: #ffffff;
@@ -232,5 +227,13 @@
 
   .button-header {
     display: none;
+  }
+}
+@media (max-width: 350px) {
+  .left-hero-section-content p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
