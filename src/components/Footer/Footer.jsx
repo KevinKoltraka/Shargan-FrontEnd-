@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="mobile-footer-links">
             <h3>Social Links</h3>
             <div className="link-in-footer">
-              <Link to="https://www.instagram.com/shargan_consulting/" target="_blank" className="link social-icon">
+              <Link to="https://www.instagram.com/sharganconsulting/" target="_blank" className="link social-icon">
                 <FaInstagram /> Instagram
               </Link>
               <Link to="https://api.whatsapp.com/send?phone=355699305604" target="_blank" className="link social-icon">
