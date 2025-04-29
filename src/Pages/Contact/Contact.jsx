@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./contact.css";
-import ContactImg from "./../../images/contact.jpg";
+import ContactImg from "./../../images/contact.webp";
 import Social from "../../components/SocialIcons/Social";
 import Hero from "../../components/HeroSection/Hero";
 
