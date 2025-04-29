@@ -4,7 +4,7 @@ import Hero from "../../components/HeroSection/Hero";
 import Partner from "../../components/Partners/Partner";
 import AboutImage from "./../../images/mission.webp";
 import Ecom from "./../../images/students.webp";
-import Business from "./../../images/business.jpg";
+import Business from "./../../images/business.webp";
 import Portfolio from "./../../images/hr.webp";
 import Happy from "./../../images/getexevent.webp";
 import Card from "../Services/Cards/Card";
