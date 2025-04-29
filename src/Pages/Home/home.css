@@ -109,7 +109,8 @@
 
   .about-zolaha-img {
     width: 90%;
-    padding: 1rem;
+    padding: 0rem;
+    margin-bottom: 2rem;
   }
 
   .who-we-are-section {
