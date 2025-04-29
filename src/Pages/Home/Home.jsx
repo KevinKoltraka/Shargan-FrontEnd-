@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <Hero
         title="Your getway"
-        description={`<span style="color:rgb(255, 255, 255);">to</span> study in Europe`}
+        description={`<span style="color:#ffffff;">to</span> <span style="color:#ffffff;">study in Europe</span>`}
         btnText="Start a conversation"
         heroImg={SharganImage}
         heroAlt="Shargan Consulting Image"
