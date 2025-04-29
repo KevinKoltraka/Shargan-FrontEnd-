@@ -1,12 +1,12 @@
 import AboutZolaha from "../../components/AboutZolaha/AboutZolaha";
-import SharganImage from "./../../images/student3.jpg";
+import SharganImage from "./../../images/student3.webp";
 import Hero from "../../components/HeroSection/Hero";
 import Partner from "../../components/Partners/Partner";
-import AboutImage from "./../../images/mission.jpg";
-import Ecom from "./../../images/students.jpg";
+import AboutImage from "./../../images/mission.webp";
+import Ecom from "./../../images/students.webp";
 import Business from "./../../images/business.jpg";
-import Portfolio from "./../../images/hr.jpg";
-import Happy from "./../../images/getexevent.png";
+import Portfolio from "./../../images/hr.webp";
+import Happy from "./../../images/getexevent.webp";
 import Card from "../Services/Cards/Card";
 import "./home.css";
 import { FiAward, FiBox } from "react-icons/fi";

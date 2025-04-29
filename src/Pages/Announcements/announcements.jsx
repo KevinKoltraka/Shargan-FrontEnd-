@@ -155,6 +155,8 @@ const CustomVideo = memo(function CustomVideo({ item, onInView }) {
     return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
   };
 
+  // Removed unused posterSrc function
+
   if (!videoState.inView) {
     return (
       <div
@@ -178,7 +180,7 @@ const CustomVideo = memo(function CustomVideo({ item, onInView }) {
         ref={videoRef}
         preload="metadata"
         onClick={togglePlay}
-        poster="/video-poster.jpg" // Add a placeholder poster
+        poster="/video-poster.webp" // WebP poster (browser will fallback to jpg if not supported)
       >
         <source src={item.media.url} type="video/mp4" />
         Your browser does not support the video tag.
@@ -275,6 +277,32 @@ CustomVideo.propTypes = {
   onInView: PropTypes.func,
 };
 
+// Enhanced function to prepare image sources with WebP and fallback
+const prepareImageSources = (url) => {
+  if (!url || typeof url !== "string")
+    return { webpUrl: url, fallbackUrl: url };
+
+  // If already WebP, create a fallback URL by replacing .webp with .jpg
+  if (url.match(/\.webp$/i)) {
+    const fallbackUrl = url.replace(/\.webp$/i, ".jpg");
+    return {
+      webpUrl: url,
+      fallbackUrl: fallbackUrl,
+    };
+  }
+
+  // For other image formats (jpg, png, etc.), generate a WebP version
+  if (url.match(/\.(jpg|jpeg|png|gif)$/i)) {
+    const basePath = url.replace(/\.[^.]+$/, "");
+    return {
+      webpUrl: `${basePath}.webp`,
+      fallbackUrl: url, // Original URL as fallback
+    };
+  }
+
+  return { webpUrl: url, fallbackUrl: url };
+};
+
 // Fix display name for AnnouncementCard component
 const AnnouncementCard = memo(function AnnouncementCard({
   item,
@@ -293,12 +321,24 @@ const AnnouncementCard = memo(function AnnouncementCard({
       {item.media && (
         <div className="media-container">
           {item.media.type === "image" && (
-            <img
-              src={item.media.url}
-              alt={item.title || "Announcement image"}
-              className="media"
-              loading="lazy" // Native lazy loading for images
-            />
+            <picture>
+              <source
+                srcSet={prepareImageSources(item.media.url).webpUrl}
+                type="image/webp"
+              />
+              <img
+                src={prepareImageSources(item.media.url).fallbackUrl}
+                alt={item.title || "Announcement image"}
+                className="media"
+                loading="lazy"
+                width={
+                  item.media.style?.width
+                    ? parseInt(item.media.style.width)
+                    : undefined
+                }
+                height="auto"
+              />
+            </picture>
           )}
           {item.media.type === "video" &&
             (item.media.url.includes("youtube.com/embed") ? (
@@ -370,9 +410,8 @@ const Announcements = () => {
     }
     newSet.add(videoId);
     activeVideosRef.current = newSet;
-  }, []); // N
+  }, []); // No dependencies needed
 
-  // Mock API fetch
   useEffect(() => {
     const fetchAnnouncements = async () => {
       const data = [
@@ -435,7 +474,7 @@ const Announcements = () => {
           category: "Trainings",
           media: {
             type: "image",
-            url: "/training.jpg",
+            url: "/training.webp", // Already using WebP (fallback will be JPG)
             style: { width: "360px" },
           },
         },
@@ -559,7 +598,6 @@ const Announcements = () => {
             style: { width: "300px" },
           },
         },
-
         {
           id: 19,
           title: "Two important elements in an interview",

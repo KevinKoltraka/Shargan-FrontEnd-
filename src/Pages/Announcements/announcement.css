@@ -34,12 +34,17 @@
   border-radius: 20px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: none;
+  transform: none;
+  animation: none;
 }
 
 .filter-btn:hover {
   background-color: #0e4c71;
   color: white;
+  transition: none;
+  transform: none;
+  animation: none;
 }
 
 .filter-btn.active {

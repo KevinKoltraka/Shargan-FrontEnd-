@@ -1,13 +1,47 @@
 import "./services.css";
 import Card from "./Cards/Card";
-import OurServices from "./../../images/Students2.jpg";
-import Ecom from "./../../images/hr2.jpg";
-import Portfolio from "./../../images/finance.jpg";
 import Hero from "../../components/HeroSection/Hero";
-import ServiceImg from "./../../images/services.png";
-import Business from "./../../images/IT.jpeg";
-import SEO from "./../../images/socialmedia.jpg";
-import SocialMedia from "./../../images/sales.jpg";
+import PropTypes from 'prop-types'; 
+
+// Import WebP images as primary format
+import OurServicesWebP from "./../../images/Students2.webp";
+import EcomWebP from "./../../images/hr2.webp";
+import PortfolioWebP from "./../../images/finance.webp";
+import ServiceImgWebP from "./../../images/services.webp";
+import BusinessWebP from "./../../images/IT.webp";
+import SEOWebP from "./../../images/socialmedia.webp";
+import SocialMediaWebP from "./../../images/sales.webp";
+
+// Import fallback images
+import OurServicesFallback from "./../../images/Students2.jpg";
+import EcomFallback from "./../../images/hr2.jpg";
+import PortfolioFallback from "./../../images/finance.jpg";
+import BusinessFallback from "./../../images/IT.jpeg";
+import SEOFallback from "./../../images/socialmedia.jpg";
+import SocialMediaFallback from "./../../images/sales.jpg";
+
+// Custom image component with WebP and fallback support
+const ImageWithFallback = ({ webp, fallback, alt, style }) => {
+  return (
+    <picture>
+      <source srcSet={webp} type="image/webp" />
+      <img src={fallback} alt={alt} style={style} />
+    </picture>
+  );
+};
+
+// Add PropTypes validation
+ImageWithFallback.propTypes = {
+  webp: PropTypes.string.isRequired,
+  fallback: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  style: PropTypes.object
+};
+
+// Default props for optional props
+ImageWithFallback.defaultProps = {
+  style: {}
+};
 
 const Services = () => {
   return (
@@ -15,13 +49,13 @@ const Services = () => {
       <Hero
         title="Unlocking Potential"
         description="through Strategic Solutions"
-        heroImg={ServiceImg}
+        heroImg={ServiceImgWebP} // Pass just the image reference, not a component
         heroAlt="Digital Success"
         btnText={null}
         style={{
           height: "90vh",
           width: "100%",
-          backgroundImage: `url(${ServiceImg})`,
+          backgroundImage: `url(${ServiceImgWebP})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -35,8 +69,9 @@ const Services = () => {
       <div className="how-we-do-cards">
         {/* Each Card is a separate instance with its own state */}
         <Card
-          key="general-services" // Adding unique keys for React
-          image={OurServices}
+          key="general-services"
+          image={OurServicesWebP} // Pass just the image reference, not a component
+          fallbackImage={OurServicesFallback} // Add a fallback prop if your Card component handles this
           altText="Our Services Overview"
           businessTitle="Student Mobility Services"
           businessPara="Helping students study in Albania with full local support."
@@ -45,8 +80,9 @@ const Services = () => {
         />
 
         <Card
-          key="hr-services" // Adding unique keys for React
-          image={Ecom}
+          key="hr-services"
+          image={EcomWebP}
+          fallbackImage={EcomFallback}
           altText="HR Services"
           businessTitle="Consulting for HR"
           businessPara="Empower people with strategic and compliant HR guidance."
@@ -55,8 +91,9 @@ const Services = () => {
         />
 
         <Card
-          key="financial-services" // Adding unique keys for React
-          image={Portfolio}
+          key="financial-services"
+          image={PortfolioWebP}
+          fallbackImage={PortfolioFallback}
           altText="Financial Services"
           businessTitle="Financial consultancy"
           businessPara="Achieve stability with smart and tailored financial plans."
@@ -67,8 +104,9 @@ const Services = () => {
 
       <div className="how-we-do-cards">
         <Card
-          key="it-services" // Adding unique keys for React
-          image={Business}
+          key="it-services"
+          image={BusinessWebP}
+          fallbackImage={BusinessFallback}
           altText="IT Services"
           businessTitle="IT Consulting"
           businessPara="Align tech with goals using smart IT strategy."
@@ -77,8 +115,9 @@ const Services = () => {
         />
 
         <Card
-          key="marketing-services" // Adding unique keys for React
-          image={SEO}
+          key="marketing-services"
+          image={SEOWebP}
+          fallbackImage={SEOFallback}
           altText="Marketing Services"
           businessTitle="Marketing consultancy"
           businessPara="Grow your brand through focused marketing and research."
@@ -87,8 +126,9 @@ const Services = () => {
         />
 
         <Card
-          key="sales-services" // Adding unique keys for React
-          image={SocialMedia}
+          key="sales-services"
+          image={SocialMediaWebP}
+          fallbackImage={SocialMediaFallback}
           altText="Sales Services"
           businessTitle="Sales consultancy"
           businessPara="Boost revenue with data-driven and skilled saleswork."

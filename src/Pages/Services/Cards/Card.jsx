@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Card = ({
-  image,
   altText,
+  image,
   businessLabel,
   businessTitle,
   businessPara,
@@ -29,7 +29,7 @@ const Card = ({
     <div className="cards-box">
       <div className="cards-inside">
         <div className="card-image-box">
-          <img src={image} alt={altText} />
+        <img src={image} alt={altText} />
         </div>
         <label className="card-label">{businessLabel}</label>
         <h2 className="card-title">{businessTitle}</h2>

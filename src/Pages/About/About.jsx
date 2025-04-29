@@ -1,12 +1,12 @@
 import Hero from "../../components/HeroSection/Hero";
 import "./about.css";
-import uiDesign from "./../../images/UI-Design.jpg";
-import OfficeTrans from "./../../images/info&research.jpg";
-import StudentVisa from "./../../images/application.jpg";
-import TransferStudent from "./../../images/transfer.png";
-import StudentExperience from "./../../images/studentexperience.png";
-import AfterGraduate from "./../../images/AfterGraduation.png";
-import Mission from "./../../images/ourmission.png";
+import uiDesign from "./../../images/UI-Design.webp";
+import OfficeTrans from "./../../images/info&research.webp";
+import StudentVisa from "./../../images/application.webp";
+import TransferStudent from "./../../images/transfer.webp";
+import StudentExperience from "./../../images/studentexperience.webp";
+import AfterGraduate from "./../../images/AfterGraduation.webp";
+import Mission from "./../../images/ourmission.webp";
 import AboutZolaha from "../../components/AboutZolaha/AboutZolaha";
 import { FiCheck } from "react-icons/fi";
 const About = () => {

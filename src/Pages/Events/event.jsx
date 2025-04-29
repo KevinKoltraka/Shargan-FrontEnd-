@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const eventsPerPage = 3;
 
@@ -22,9 +22,15 @@ const Events = () => {
           time: "All Day",
           location: "Dubai World Trade Centre, Dubai",
           category: "Impact & Causes",
-          description: "Join Shargan Consulting at the GETEX Fair Education 2025 in Dubai to explore academic opportunities in Albania, meet education experts, and get guidance on study programs and visa support.",
+          description:
+            "Join Shargan Consulting at the GETEX Fair Education 2025 in Dubai to explore academic opportunities in Albania, meet education experts, and get guidance on study programs and visa support.",
           mediaType: "image",
-          media: "/1.jpg"
+          media: {
+            webp: "/1.webp",
+            jpg: "/1.jpg",
+            jpeg: "/1.jpeg",
+            png: "/1.png",
+          },
         },
         {
           id: 2,
@@ -33,20 +39,33 @@ const Events = () => {
           time: "11:00",
           location: null,
           category: "Business & Strategy",
-          description: "This organization is a collaboration with Mr. Gjergj Mero Creative Director. Participation in the training is limited, we welcome you",
+          description:
+            "This organization is a collaboration with Mr. Gjergj Mero Creative Director. Participation in the training is limited, we welcome you",
           mediaType: "image",
-          media: "/2.jpg",
+          media: {
+            webp: "/2.webp",
+            jpg: "/2.jpg",
+            jpeg: "/2.jpeg",
+            png: "/2.png",
+          },
         },
         {
           id: 3,
-          title: "The executive presence of the Woman (not masculinized) at work, lecturer Dr.Matilda Likaj",
+          title:
+            "The executive presence of the Woman (not masculinized) at work, lecturer Dr.Matilda Likaj",
           date: "2024-03-16",
           time: "11:00",
           location: null, // Example with null location
           category: "Learning & Growth",
-          description: "At the end of the training, the participants will be provided with a certificate",
+          description:
+            "At the end of the training, the participants will be provided with a certificate",
           mediaType: "image",
-          media: "/3.jpg"
+          media: {
+            webp: "/3.webp",
+            jpg: "/3.jpg",
+            jpeg: "/3.jpeg",
+            png: "/3.png",
+          },
         },
         {
           id: 4,
@@ -55,9 +74,15 @@ const Events = () => {
           time: "11:00",
           location: null, // Example with null location
           category: "Learning & Growth",
-          description: "Learn practical strategies to analyze and prevent staff turnover in this impactful 90-minute HR training session.",
+          description:
+            "Learn practical strategies to analyze and prevent staff turnover in this impactful 90-minute HR training session.",
           mediaType: "image",
-          media: "/4.jpg",
+          media: {
+            webp: "/4.webp",
+            jpg: "/4.jpg",
+            jpeg: "/4.jpeg",
+            png: "/4.png",
+          },
         },
         {
           id: 5,
@@ -66,20 +91,33 @@ const Events = () => {
           time: null,
           location: null,
           category: "Learning & Growth",
-          description: "Empower your career with comprehensive HR training that blends theory and practice to boost your confidence and success in the job market.",
+          description:
+            "Empower your career with comprehensive HR training that blends theory and practice to boost your confidence and success in the job market.",
           mediaType: "image",
-          media: "/5.jpg"
+          media: {
+            webp: "/5.webp",
+            jpg: "/5.jpg",
+            jpeg: "/5.jpeg",
+            png: "/5.png",
+          },
         },
         {
           id: 6,
-          title: "Introduction to the world of work and the right approach to follow in the first steps",
+          title:
+            "Introduction to the world of work and the right approach to follow in the first steps",
           date: "2023-09-07",
           time: "90-120 minutes",
           location: null,
           category: "Learning & Growth",
-          description: "Gain essential insights into job interviews, employment rights, and onboarding to confidently navigate your first steps into the professional world.",
+          description:
+            "Gain essential insights into job interviews, employment rights, and onboarding to confidently navigate your first steps into the professional world.",
           mediaType: "image",
-          media: "/6.jpg"
+          media: {
+            webp: "/6.webp",
+            jpg: "/6.jpg",
+            jpeg: "/6.jpeg",
+            png: "/6.png",
+          },
         },
       ];
 
@@ -87,7 +125,9 @@ const Events = () => {
       setFilteredEvents(eventData);
 
       // Extract unique categories
-      const uniqueCategories = [...new Set(eventData.map(event => event.category))];
+      const uniqueCategories = [
+        ...new Set(eventData.map((event) => event.category)),
+      ];
       setCategories(uniqueCategories);
     };
 
@@ -99,45 +139,87 @@ const Events = () => {
     setActiveCategory(category);
     setCurrentPage(1);
 
-    if (category === 'all') {
+    if (category === "all") {
       setFilteredEvents(events);
     } else {
-      const filtered = events.filter(event => event.category === category);
+      const filtered = events.filter((event) => event.category === category);
       setFilteredEvents(filtered);
     }
   };
 
   // Format date for display
   const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { year: "numeric", month: "long", day: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
   // Calculate pagination
   const indexOfLastEvent = currentPage * eventsPerPage;
   const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
-  const currentEvents = filteredEvents.slice(indexOfFirstEvent, indexOfLastEvent);
+  const currentEvents = filteredEvents.slice(
+    indexOfFirstEvent,
+    indexOfLastEvent
+  );
   const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Media renderer for images/videos
+  // Media renderer for images/videos with WebP support and multiple fallbacks
   const renderMedia = (event) => {
-    if (event.mediaType === 'video') {
+    if (event.mediaType === "video") {
       return (
         <div className="video-container">
           <div className="video-overlay">
             <div className="play-button">
-              <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" strokeWidth="2" fill="none">
+              <svg
+                viewBox="0 0 24 24"
+                width="48"
+                height="48"
+                stroke="currentColor"
+                strokeWidth="2"
+                fill="none"
+              >
                 <polygon points="5 3 19 12 5 21 5 3" />
               </svg>
             </div>
           </div>
-          <img src={event.thumbnail} alt={event.title} className="event-thumbnail" />
+          <img
+            src={event.thumbnail}
+            alt={event.title}
+            className="event-thumbnail"
+          />
         </div>
       );
     } else {
-      return <img src={event.media} alt={event.title} className="event-image" />;
+      // Find the first available fallback format (order of preference: jpg, jpeg, png)
+      const fallbackSrc =
+        event.media.jpg || event.media.jpeg || event.media.png;
+
+      // Using the picture element for automatic WebP fallback with multiple sources
+      return (
+        <picture>
+          {/* WebP version - highest priority */}
+          <source srcSet={event.media.webp} type="image/webp" />
+
+          {/* JPG version - second priority */}
+          {event.media.jpg && (
+            <source srcSet={event.media.jpg} type="image/jpeg" />
+          )}
+
+          {/* JPEG version - third priority */}
+          {event.media.jpeg && (
+            <source srcSet={event.media.jpeg} type="image/jpeg" />
+          )}
+
+          {/* PNG version - fourth priority */}
+          {event.media.png && (
+            <source srcSet={event.media.png} type="image/png" />
+          )}
+
+          {/* Fallback image that will be used if none of the sources are supported */}
+          <img src={fallbackSrc} alt={event.title} className="event-image" />
+        </picture>
+      );
     }
   };
 
@@ -148,15 +230,19 @@ const Events = () => {
       {/* Category Filters */}
       <div className="filter-container">
         <button
-          className={`filter-button ${activeCategory === 'all' ? 'active' : ''}`}
-          onClick={() => filterEventsByCategory('all')}
+          className={`filter-button ${
+            activeCategory === "all" ? "active" : ""
+          }`}
+          onClick={() => filterEventsByCategory("all")}
         >
           All Events
         </button>
-        {categories.map(category => (
+        {categories.map((category) => (
           <button
             key={category}
-            className={`filter-button ${activeCategory === category ? 'active' : ''}`}
+            className={`filter-button ${
+              activeCategory === category ? "active" : ""
+            }`}
             onClick={() => filterEventsByCategory(category)}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -167,16 +253,21 @@ const Events = () => {
       {/* Events Grid */}
       <div className="events-grid">
         {currentEvents.length > 0 ? (
-          currentEvents.map(event => (
+          currentEvents.map((event) => (
             <div key={event.id} className="event-card">
               <div className="event-image-container">
                 {renderMedia(event)}
                 <div className="event-date-badge">
                   <span className="event-date">{formatDate(event.date)}</span>
                 </div>
-                {event.mediaType === 'video' && (
+                {event.mediaType === "video" && (
                   <div className="media-badge">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                    >
                       <path d="M8 5v14l11-7z" />
                     </svg>
                     <span>Video</span>
@@ -189,7 +280,13 @@ const Events = () => {
                   {/* Only render location if it's not null */}
                   {event.location && (
                     <div className="event-detail">
-                      <svg className="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <svg
+                        className="event-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
                         <circle cx="12" cy="9" r="2.5" />
                       </svg>
@@ -200,7 +297,13 @@ const Events = () => {
                   {/* Only render time if it's not null */}
                   {event.time && (
                     <div className="event-detail">
-                      <svg className="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <svg
+                        className="event-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
                         <circle cx="12" cy="12" r="10" />
                         <path d="M12 6v6l4 2" />
                       </svg>
@@ -212,8 +315,13 @@ const Events = () => {
                 <div className="event-footer">
                   <span className="event-category">{event.category}</span>
                   <div className="event-buttons">
-                    <button className="event-button register-btn">Register</button>
-                    <Link to={`/event/${event.id}`} className="event-button details-btn">
+                    <button className="event-button register-btn">
+                      Register
+                    </button>
+                    <Link
+                      to={`/event/${event.id}`}
+                      className="event-button details-btn"
+                    >
                       Learn More
                     </Link>
                   </div>
@@ -236,7 +344,14 @@ const Events = () => {
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
           >
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              stroke="currentColor"
+              strokeWidth="2"
+              fill="none"
+            >
               <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
@@ -245,7 +360,9 @@ const Events = () => {
             {Array.from({ length: totalPages }).map((_, index) => (
               <button
                 key={index}
-                className={`pagination-number ${currentPage === index + 1 ? 'active' : ''}`}
+                className={`pagination-number ${
+                  currentPage === index + 1 ? "active" : ""
+                }`}
                 onClick={() => paginate(index + 1)}
               >
                 {index + 1}
@@ -258,7 +375,14 @@ const Events = () => {
             onClick={() => paginate(currentPage + 1)}
             disabled={currentPage === totalPages}
           >
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              stroke="currentColor"
+              strokeWidth="2"
+              fill="none"
+            >
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
