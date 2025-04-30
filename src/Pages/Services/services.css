@@ -1,40 +1,39 @@
-.our-services{
+.our-services {
   text-align: center;
   font-size: 3rem;
 }
-  .how-we-do-cards{
-    display: flex;
-    gap: 1rem;
-    padding: 4rem;
-    justify-content: center;
-  }
+.how-we-do-cards {
+  display: flex;
+  gap: 1rem;
+  padding: 4rem;
+  justify-content: center;
+}
 
-  h2 {
-    margin-top: 3rem;
-    color: #0e4c71;
-    font-family: "Cambria";
-  }
+.our-services h2 {
+  margin-top: 2rem;
+  font-size: 4rem;
+  color: #0e4c71;
+  font-family: "Cambria";
+}
 
-  
 /* Responsive navbar For Tablet */
 
-@media (max-width:900px){
-  .our-services{
+@media (max-width: 900px) {
+  .our-services {
     font-size: 3rem;
   }
-  
-  .how-we-do-cards{
+
+  .how-we-do-cards {
     display: grid;
   }
 }
 
-
 /* Responsive navbar For Mobile */
-@media (max-width:500px){
-  .our-services{
+@media (max-width: 500px) {
+  .our-services {
     font-size: 2rem;
   }
-  .how-we-do-cards{
+  .how-we-do-cards {
     display: flex;
     flex-direction: column;
     align-items: center;

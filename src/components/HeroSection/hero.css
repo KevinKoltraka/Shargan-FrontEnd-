@@ -191,10 +191,12 @@
     margin: 0;
     padding: 0;
     color: #0e4c71;
+    text-align: center;
   }
 
   .left-hero-section-content p {
     font-size: 4rem;
+    text-align: center;
     margin: 0;
     padding: 0;
     color: #ffffff;
