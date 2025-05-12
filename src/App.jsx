@@ -14,16 +14,40 @@ import ScrollToTop from './components/Scroll/ScrollToTop';
 import Events from './Pages/Events/event';
 import { TechConferenceDetail } from './Pages/Events/TechConferenceDetail';
 import Announcement from './Pages/Announcements/announcements';
+import { FaWhatsapp } from "react-icons/fa";
 
-// Layout component that includes the navbar, footer and scroll to top
-// This is defined directly in App.js - no need to create a separate file
+
 const Layout = () => {
   return (
     <>
       <ScrollToTop />
       <Navbar />
-      <Outlet /> {/* This is where your page content will appear */}
+      <Outlet />
       <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/355699305604"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          width: '65px',
+          height: '65px',
+          backgroundColor: '#25D366',
+          borderRadius: '50%',
+          zIndex: 1000,
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <FaWhatsapp size={40} color="#fff" />
+      </a>
+
     </>
   );
 };
