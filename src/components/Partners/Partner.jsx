@@ -3,9 +3,10 @@ import "./partner.css";
 import Dots1 from "./BrandImages/9DOTS.svg";
 import Dots2 from "./BrandImages/unimetropolitan.svg";
 import Dots3 from "./BrandImages/getex.svg";
-import Dots4 from "./BrandImages/flex.svg";
-import Dots5 from "./BrandImages/wbu.svg";
-import Dots6 from "./BrandImages/coachingLogo.svg";
+import Dots4 from "./BrandImages/NexgenLogo.png"
+import Dots5 from "./BrandImages/flex.svg";
+import Dots6 from "./BrandImages/wbu.svg";
+import Dots7 from "./BrandImages/coachingLogo.svg";
 
 const Partner = () => {
   const scrollerRef = useRef(null);
@@ -55,16 +56,20 @@ const Partner = () => {
             <img src={Dots3} alt="Getex" loading="lazy" />
           </a>
 
+           <a href="/" target="_blank" rel="noopener noreferrer" className="partner-item">
+            <img src={Dots4} alt="NextGen" loading="lazy" />
+          </a>
+
           <a href="https://www.instagram.com/flexluxor" target="_blank" rel="noopener noreferrer" className="partner-item">
-            <img src={Dots4} alt="Flex" loading="lazy" />
+            <img src={Dots5} alt="Flex" loading="lazy" />
           </a>
 
           <a href="https://wbu.edu.al/" target="_blank" rel="noopener noreferrer" className="partner-item">
-            <img src={Dots5} alt="WBU" loading="lazy" />
+            <img src={Dots6} alt="WBU" loading="lazy" />
           </a>
 
           <a href="https://www.coaching-you-group.com/" target="_blank" rel="noopener noreferrer" className="partner-item">
-            <img src={Dots6} alt="Coaching" loading="lazy" />
+            <img src={Dots7} alt="Coaching" loading="lazy" />
           </a>
         </div>
       </div>
